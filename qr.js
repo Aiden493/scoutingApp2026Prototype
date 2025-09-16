@@ -1,4 +1,4 @@
-    // Assuming you have an input field to get the data
+
     const dataToEncode = document.getElementById('dataInput').value; 
 
     // Create a new QRCode instance
