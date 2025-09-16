@@ -19,7 +19,7 @@ html, body {
     justify-content: center;
     align-items: center;
     background-color: #1e1e1e;
-    background-image: url('https://raw.githubusercontent.com/791747hnlhymt/scoutingApp2026Prototype/main/Screenshot%202025-05-29%20141707.png');
+    background-image: url('../Images/Background_Wide.png');
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -141,7 +141,7 @@ button:hover {
     align-items: center;
     padding: 60px 20px;
     gap: 40px;
-    background-image: url('https://raw.githubusercontent.com/791747hnlhymt/scoutingApp2026Prototype/main/Screenshot%202025-05-29%20141707.png');
+    background-image: url('../Images/Background_Wide.png');
     background-size: cover;
     background-position: center;
 }
