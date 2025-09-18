@@ -32,7 +32,7 @@ html, body {
     
 }
 
-.foil-card {
+.SpinningBackground {
     position: fixed;
     background: linear-gradient(135deg, #d4af37, #ffd700);
     background-color: #d4af37;
@@ -61,7 +61,7 @@ html, body {
     100% { background-position: 0% 50%; }
 }
 
-#foil-card::after {
+#SpinningBackground ::after {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -81,14 +81,6 @@ h1 {
     background-color: rgba(255, 255, 255, 0.85);
     padding: 15px 25px;
     border-radius: 20px;
-}
-
-h1:hover{
-    background-color: #444;
-    color:white;
-    transition: 0.2s ease;
-    transform: translateY(-2px);
-    
 }
 
 button {
@@ -133,6 +125,7 @@ button:hover {
     margin-bottom: 20px;
     background-color: crimson;
 }
+
 
 #play{
     display: flex;

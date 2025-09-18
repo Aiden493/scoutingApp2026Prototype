@@ -1,24 +1,3 @@
-#allianceSelector {
-    position: relative;
-    top: 20px;
-    left: 20px;
-    background-color: darkgreen;
-    width: 100%;
-    max-width: 400px;
-    height: 150px;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.2rem;
-}
-
-#blueAlliance {
-    position: relative;
-    left: 80px;
-}
-
 #resetCounts {
     align-self: center;
     background-color: darkred;
@@ -88,36 +67,35 @@
     text-align: center;
   }
 
-
-  #redAlliance{
-    background-color:red;
-    width:100px;
-    height:100px;
-    border:none;
-    color:white;
-    font-size: 16px;
-     border-radius: 5px;
-    cursor: pointer;
-    position: relative;
-    right:10px;
+  .button-container {
+    display: flex;
   }
-
-
-  #blueAlliance{
-    background-color:blue;
-    width:100px;
-    height:100px;
-    border:none;
-    cursor: pointer;
+  
+  #redAlliance, #blueAlliance {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: none;
     font-size: 16px;
     border-radius: 5px;
-    position: relative;
-    top:17px;
-    right:15px;
+    cursor: pointer;
+    color: white;
+    margin-right: 10px; /* Small gap between buttons */
+    vertical-align: middle;
   }
+  
+  #redAlliance {
+    background-color: red;
+  }
+  
+  #blueAlliance {
+    background-color: blue;
+  }
+  
+
 
   #redAlliance:focus , #blueAlliance:focus{
-    border: 7px solid black;
+    border: 7px solid white;
     outline:none;
   }
   
