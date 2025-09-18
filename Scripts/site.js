@@ -1,64 +1,63 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const screens = {
+const screens = {
 	main: document.getElementById('main-screen'),
 	sub: document.getElementById('sub'),
 	obj: document.getElementById('obj'),
 	play: document.getElementById('play'),
 	dataScreen: document.getElementById('dataScreen') // Make sure this element exists!
-  };
+};
 
-  let subjectiveCompleted = false;
-  let playCompleted = false;
+let subjectiveCompleted = false;
+let playCompleted = false;
 
-  function showScreen(screenName) {
+function showScreen(screenName) {
 	// Hide all screens
 	Object.values(screens).forEach(screen => screen.style.display = 'none');
 	// Show requested screen
 	screens[screenName].style.display = 'flex';
-  }
+}
 
-  // Navigation buttons
-  document.getElementById('Subjective').addEventListener('click', () => showScreen('sub'));
-  document.getElementById('Objective').addEventListener('click', () => showScreen('obj'));
+// Navigation buttons
+document.getElementById('Subjective').addEventListener('click', () => showScreen('sub'));
+document.getElementById('Objective').addEventListener('click', () => showScreen('obj'));
 
-  document.getElementById('play-off').addEventListener('click', () => showScreen('play'));
+document.getElementById('play-off').addEventListener('click', () => showScreen('play'));
 
-  document.getElementById('robotData').addEventListener('click', () => {
+document.getElementById('robotData').addEventListener('click', () => {
 	if (subjectiveCompleted) {
-	  showScreen('dataScreen');
+		showScreen('dataScreen');
 	} else {
-	  alert("Please complete both Subjective and Play-Off screens before proceeding to Robot Data.");
+		alert("Please complete both Subjective and Play-Off screens before proceeding to Robot Data.");
 	}
-  });
+});
 
-  // Back buttons return to main
-  document.querySelectorAll('.back-btn').forEach(button => {
+// Back buttons return to main
+document.querySelectorAll('.back-btn').forEach(button => {
 	button.addEventListener('click', () => showScreen('main'));
-  });
+});
 
-  // Coral buttons logic
-  const coralButtons = document.querySelectorAll('.coral-buttons button');
-  coralButtons.forEach(button => {
+// Coral buttons logic
+const coralButtons = document.querySelectorAll('.coral-buttons button');
+coralButtons.forEach(button => {
 	button.dataset.count = 0;
 	button.dataset.originalText = button.textContent;
 
 	button.addEventListener('click', () => {
-	  let count = parseInt(button.dataset.count) + 1;
-	  button.dataset.count = count;
-	  button.textContent = `${button.dataset.originalText}: ${count}`;
+		let count = parseInt(button.dataset.count) + 1;
+		button.dataset.count = count;
+		button.textContent = `${button.dataset.originalText}: ${count}`;
 	});
-  });
+});
 
-  // Reset counts
-  document.getElementById('resetCounts').addEventListener('click', () => {
+// Reset counts
+document.getElementById('resetCounts').addEventListener('click', () => {
 	coralButtons.forEach(button => {
-	  button.dataset.count = 0;
-	  button.textContent = button.dataset.originalText;
+		button.dataset.count = 0;
+		button.textContent = button.dataset.originalText;
 	});
-  });
+});
 
-  // Subjective submit logic
-  document.getElementById('submitSubjective').addEventListener('click', () => {
+// Subjective submit logic
+document.getElementById('submitSubjective').addEventListener('click', () => {
 	const teamNumber = document.getElementById('teamNumber').value;
 	const strategyNotes = document.getElementById('strategyNotes').value;
 	const driverSkill = document.getElementById('driverSkill').value;
@@ -66,18 +65,19 @@ document.addEventListener('DOMContentLoaded', function () {
 	const reliability = document.getElementById('reliability').value;
 
 	const selectedAlliance = document.getElementById('redAlliance').classList.contains('selected') ? 'Red' :
-	  document.getElementById('blueAlliance').classList.contains('selected') ? 'Blue' :
-	  'None';
+		document.getElementById('blueAlliance').classList.contains('selected') ? 'Blue' :
+			'None';
 
 	if (!teamNumber) {
-	  alert("Please enter a team number.");
-	  return;
+		alert("Please enter a team number.");
+		return;
 	} else if (!strategyNotes) {
-	  alert("Please enter the team's strategy.");
-	  return;
+		alert("Please enter the team's strategy.");
+		return;
 	}
 
 	// I combined the data so it's easier to parse and requires only one QR Code, easier for simple & fast transfers
+	// - Eliana
 	const data = {
 		teamInfo: {
 			teamNumber,
@@ -97,35 +97,49 @@ document.addEventListener('DOMContentLoaded', function () {
 			Proccessor
 		}
 	};
-
+	
 	console.log("Subjective Data Submitted:", data);
 	alert("Subjective data saved!");
 	subjectiveCompleted = true;
 
-	document.getElementById('dataInput').innerText = `${JSON.stringify(data)}`;
-	// document.getElementById('outputData2').innerHTML = `<pre>${JSON.stringify(data2, null, 2)}</pre>`;
-  });
+	console.log("Updating QRCode!")
+	// Clear previous QR code
+	const qrCodeContainer = document.getElementById('qrcode');
+	qrCodeContainer.innerHTML = '';
 
-  // Objective submit logic
-  document.getElementById('submitObjective').addEventListener('click', () => {
+	// Generate new QR code
+	new QRCode(qrCodeContainer, {
+		text: JSON.stringify(data),
+		width: 128,
+		height: 128,
+		colorDark: "#000000",
+		colorLight: "#ffffff",
+		correctLevel: QRCode.CorrectLevel.L
+	});
+
+	document.getElementById("outputData").style.display = "block";
+	// document.getElementById('outputData2').innerHTML = `<pre>${JSON.stringify(data2, null, 2)}</pre>`;
+});
+
+// Objective submit logic
+document.getElementById('submitObjective').addEventListener('click', () => {
 	// Add validation here if needed
 	alert("Objective data saved!");
 	objectiveCompleted = true;
-  });
+});
 
-  // Alliance button logic
-  function clearAllianceSelection() {
+// Alliance button logic
+function clearAllianceSelection() {
 	document.getElementById('redAlliance').classList.remove('selected');
 	document.getElementById('blueAlliance').classList.remove('selected');
-  }
+}
 
-  document.getElementById('redAlliance').addEventListener('click', () => {
+document.getElementById('redAlliance').addEventListener('click', () => {
 	clearAllianceSelection();
 	document.getElementById('redAlliance').classList.add('selected');
-  });
+});
 
-  document.getElementById('blueAlliance').addEventListener('click', () => {
+document.getElementById('blueAlliance').addEventListener('click', () => {
 	clearAllianceSelection();
 	document.getElementById('blueAlliance').classList.add('selected');
-  });
 });

@@ -91,7 +91,6 @@
 			<h2>Generate QR Code</h2>
 			<p id="dataInput" type="text" placeholder="Enter text to encode"
 				style="display: none;" ></p>
-			<button id="generateQRBtn" type="button">Generate QR Code</button>
 			<button class="back-btn" type="button">Go Back</button>
 
 			<div id="outputData" style="margin-top: 20px; background-color:black; color:white; padding: 10px; display: none;">
@@ -101,35 +100,8 @@
 
 		<script src="./Scripts/site.js"></script>
 
-		<!-- QR Code Library by Shim Sangmin -->
+		<!--    QR Code Library by Shim Sangmin      -->
 		<!-- https://github.com/davidshimjs/qrcodejs -->
 		<script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
-
-		<script>
-			document.getElementById('generateQRBtn').addEventListener('click', function () {
-				const dataToEncode = document.getElementById('dataInput').innerText.trim();
-
-				if (!dataToEncode) {
-					alert('Please enter some text to generate a QR code.');
-					return;
-				}
-
-				// Clear previous QR code
-				const qrCodeContainer = document.getElementById('qrcode');
-				qrCodeContainer.innerHTML = '';
-
-				// Generate new QR code
-				new QRCode(qrCodeContainer, {
-					text: dataToEncode,
-					width: 128,
-					height: 128,
-					colorDark: "#000000",
-					colorLight: "#ffffff",
-					correctLevel: QRCode.CorrectLevel.H
-				});
-
-				document.getElementById("outputData").style.display = "block";
-			});
-		</script>
 	</body>
 </html>
