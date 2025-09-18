@@ -2,8 +2,10 @@ const cacheName = 'v1';
 const cacheAssets = [
   '/',
   '/index.html',
-  '/styles.css',
-  '/app.js',
+  '/style.css',
+  '/style2.css',
+  '/site.js',
+  '/manifest.json',
   '/icon-192.png',
   '/icon-512.png'
 ];
