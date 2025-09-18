@@ -86,12 +86,18 @@
   
   #redAlliance {
     background-color: red;
-    background: url('');
+    background-image: url('https://github.com/791747hnlhymt/scoutingApp2026Prototype/blob/main/Scouting%20App%20Red%20Alliance%20Button%20Background-1.png?raw=true');
+    background-repeat: no-repeat;
+    background-size: cover; 
   }
   
   #blueAlliance {
     background-color: blue;
+    background-image: url('https://github.com/791747hnlhymt/scoutingApp2026Prototype/blob/main/Scouting%20App%20Blue%20Alliance%20Button%20Background.png?raw=true');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
+  
   
 
 
