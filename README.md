@@ -15,3 +15,7 @@ The reason why we chose to make an website and not an app is beacuase websites a
 
 
 
+How do we collect the data?
+
+after filling out information on the previous screen you will be able to acsess robot data and you will be given a qr code that will give you all the information you need but
+do not search it up instead veiwe the preview information copy it and paste it in a doc like notes app
