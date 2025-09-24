@@ -26,6 +26,11 @@
         font-size: 1rem;
     }
 
+    #algae, #l1Coral, #l2Coral, #l3Coral, #l4Coral, #NetScore, #Proccessor {
+      color: black !important;
+      font-weight: bold;
+    }
+
     #allianceSelector {
         position: relative;
         margin-top: 20px;

@@ -85,25 +85,30 @@ h1 {
 
 
 button {
-    padding:15px 30px;
-    font-size:1.1rem;
-    border:none;
-    border-radius:12px;
-    background-color:black;
-    cursor:pointer;
-    max-width:300px;
-    width:80%;
-    transition:0.2s ease;
-    color:white;
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
-    
-}
-
-button:hover {
-    background-color: #444;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-}
+    padding: 18px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+  
+    background: linear-gradient(135deg, #111, #222); 
+    color: #ffd700 !important;
+    border: 2px solid #ffd700;
+  
+    box-shadow: 8px 8px 0px rgba(0,0,0,0.6);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
+    background: linear-gradient(135deg, #222, #333);
+  }
+  
+  
+ 
+  
 
 .screen {
     display: none;
@@ -172,19 +177,21 @@ button:hover {
 #Proccessor { background-color: red; }
 #continue{background-color:green; width:150px; height:60px;}
 
-#table {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
+table {
+    border-collapse: collapse;
     width: 100%;
-    height: 90vh;
-    background-color: beige;
-    border-radius: 15px;
-    color: black;
-    padding: 30px;
-}
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  th {
+    background: #333;
+    color: #ffd700;
+  }
+  td {
+    background: #222;
+    color: #ddd;
+  }
+  
 
 #continue {
     position: absolute;
