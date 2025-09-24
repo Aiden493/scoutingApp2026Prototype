@@ -35,3 +35,23 @@ document.getElementById('robotData').addEventListener('click', () => {
 document.querySelectorAll('.back-btn').forEach(button => {
 	button.addEventListener('click', () => showScreen('main'));
 });
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll("button");
+    buttons.forEach(button => {
+    button.addEventListener("mouseenter", () => {
+    button.classList.add("glow");
+});
+
+button.addEventListener("mouseleave", () => {
+        setTimeout(() => {
+            button.classList.remove("glow");
+            }, 1000); // Glows for 1 second after leaving
+        });
+    });
+});
+
