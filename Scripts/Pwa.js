@@ -4,7 +4,10 @@ const cacheAssets = [
   '/index.html',
   '/style.css',
   '/style2.css',
-  '/site.js',
+  '/js/allianceButtonLogic.js',
+  '/js/buttonMap.js',
+  '/js/coralButtonsLogic.js',
+  '/js/data.js',
   '/manifest.json',
   '/icon-192.png',
   '/icon-512.png'
