@@ -103,6 +103,17 @@
 		<script src = "./Scripts/data.js"></script>
 		<script src = "./Scripts/Pwa.js"></script>
 
+
+		<script>
+			if ('serviceWorker' in navigator) {
+			  window.addEventListener('load', () => {
+				navigator.serviceWorker.register('/Pwa.js')
+				  .then(reg => console.log('working', reg))
+				  .catch(err => console.error('Not working', err));
+			  });
+			}
+		  </script>
+
 		<!--    QR Code Library by Shim Sangmin      -->
 		<!-- https://github.com/davidshimjs/qrcodejs -->
 		<script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>

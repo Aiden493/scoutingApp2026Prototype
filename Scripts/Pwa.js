@@ -26,8 +26,10 @@ self.addEventListener('install', e => {
 self.addEventListener('activate', e => {
   e.waitUntil(
     caches.keys().then(keys =>
-      Promise.all(keys.filter(key => key !== cacheName)
-        .map(key => caches.delete(key)))
+      Promise.all(
+        keys.filter(key => key !== cacheName)
+          .map(key => caches.delete(key))
+      )
     ).then(() => self.clients.claim())
   );
 });
@@ -38,17 +40,3 @@ self.addEventListener('fetch', e => {
     fetch(e.request).catch(() => caches.match(e.request))
   );
 });
-
-
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then(reg => console.log('Service Worker registered', reg))
-        .catch(err => console.error('Service Worker failed', err));
-    });
-  }
-  
-
-  /*/
-    prototype of the PWA dont know if it works so far i think i will need a domain for the website for the code to execute 
-  /*/
