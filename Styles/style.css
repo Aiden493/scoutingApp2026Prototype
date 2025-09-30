@@ -98,7 +98,7 @@ h1 {
 }
 
 
-button {
+.button {
 	padding: 18px 40px;
 	font-size: 1.2rem;
 	font-weight: bold;
@@ -115,14 +115,14 @@ button {
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-button:hover {
+.button:hover {
 	transform: translateY(-4px);
 	box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
 	background: linear-gradient(135deg, #222, #333);
 }
 
 
-button.glow {
+.button.glow {
 	animation: glow 1.5s infinite alternate ease-in-out;
 }
 
@@ -139,6 +139,40 @@ button.glow {
 	100% {
 		box-shadow: 0 0 5px rgba(200, 221, 8, 0.6);
 	}
+}
+
+
+.buttonTwo {
+	padding: 18px 40px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	border: none;
+	border-radius: 14px;
+	cursor: pointer;
+	opacity: 0.9;
+    color:yellow;
+
+	background: linear-gradient(135deg, #111, #222);
+
+	box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.buttonTwo:hover {
+	transform: translateY(-4px);
+	background: linear-gradient(135deg, #222, #333);
+}
+
+.buttonTwo:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
+	background: linear-gradient(135deg, #222, #333);
+}
+
+
+.buttonTwo.glow2 {
+	animation: glow 1.5s infinite alternate ease-in-out;
 }
 
 
@@ -162,9 +196,35 @@ button.glow {
 .back-btn {
 	align-self: flex-start;
 	margin-bottom: 20px;
+    padding: 18px 40px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	border: none;
+	border-radius: 14px;
+	cursor: pointer;
+	opacity: 0.9;
+
+	background: linear-gradient(135deg, #111, #222);
+	color: #ffd700 !important;
+	border: 2px solid #ffd700;
+
+	box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
 	background-color: crimson;
 }
 
+.back-btn:hover {
+	transform: translateY(-4px);
+	background: linear-gradient(135deg, #222, #333);
+}
+
+
+
+.back-btn:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
+	background: linear-gradient(135deg, #222, #333);
+}
 
 #play {
 	display: flex;

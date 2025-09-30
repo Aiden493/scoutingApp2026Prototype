@@ -14,10 +14,10 @@
 	<body>
 		<div id="main-screen" class="SpinningBackground">
 			<h1>Scouting prototype for 2026</h1>
-			<button id="Objective" type="button">OBJECTIVE</button>
-			<button id="Subjective" type="button">SUBJECTIVE</button>
-			<button id="play-off" type="button">PLAY OFF</button>
-			<button id="robotData" type="button">ROBOT DATA</button>
+			<button id="Objective" class="buttonTwo">OBJECTIVE</button>
+			<button id="Subjective" class="buttonTwo">SUBJECTIVE</button>
+			<button id="play-off" class="buttonTwo">PLAY OFF</button>
+			<button id="robotData" class="buttonTwo">ROBOT DATA</button>
 		</div>
 
 		<div id="sub" class="screen">
@@ -32,8 +32,8 @@
 				<div class="form-section alliance-buttons">
 					<label>Alliance:</label>
 					<div class="alliance-choice">
-						<button id="redAlliance" type="button">Red</button>
-						<button id="blueAlliance" type="button">Blue</button>
+						<button id="redAlliance" class="button">Red</button>
+						<button id="blueAlliance" class="button">Blue</button>
 					</div>
 				</div>
 
@@ -57,12 +57,12 @@
 					<input type="range" min="1" max="5" id="reliability">
 				</div>
 
-				<button id="submitSubjective" type="button" color = "yellow">Submit</button>
-				<button class="back-btn" color = "yellow">Back</button>
+				<button id="submitSubjective" class="button" color = "yellow">Submit</button>
+				<button class="back-btn" color = "yellow" class = "button">Back</button>
 			</div>
 		</div>
 
-		<button id="continue" type="button">Continue</button>
+		<button id="continue" class="button">Continue</button>
 
 		<div id="obj">
 			<button class="back-btn">Back</button>
@@ -73,17 +73,17 @@
 		</div>
 
 		<div id="play" class="screen ">
-			<button class="back-btn" type="button">Go Back</button>
+			<button class="back-btn">Go Back</button>
 			<div class="coral-buttons">
-				<button id="algae" type="button">Algae</button>
-				<button id="l1Coral" type="button">L1 Coral</button>
-				<button id="l2Coral" type="button">L2 Coral</button>
-				<button id="l3Coral" type="button">L3 Coral</button>
-				<button id="l4Coral" type="button">L4 Coral</button>
-				<button id="NetScore" type="button">Net Score</button>
-				<button id="Proccessor" type="button">Proccessor</button>
+				<button id="algae" class="button">Algae</button>
+				<button id="l1Coral" class="button">L1 Coral</button>
+				<button id="l2Coral" class="button">L2 Coral</button>
+				<button id="l3Coral" class="button">L3 Coral</button>
+				<button id="l4Coral" class="button">L4 Coral</button>
+				<button id="NetScore" class="button">Net Score</button>
+				<button id="Proccessor" class="button">Proccessor</button>
 			</div>
-			<button id="resetCounts" type="button">Reset Counts</button>
+			<button id="resetCounts" class="button">Reset Counts</button>
 		</div>
 
 		<!-- Corrected and added QR code section -->
@@ -91,7 +91,7 @@
 			<h2>Generate QR Code</h2>
 			<p id="dataInput" type="text" placeholder="Enter text to encode"
 				style="display: none;" ></p>
-			<button class="back-btn" type="button">Go Back</button>
+			<button class="back-btn">Go Back</button>
 
 			<div id="outputData" style="margin-top: 20px; background-color:black; color:white; padding: 10px; display: none;">
 				<div id="qrcode"></div>
