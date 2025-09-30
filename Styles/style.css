@@ -1,214 +1,261 @@
-html, body {
-    margin: 0;
-    padding:0;
-    width:100%;
-    height:100%;
-    font-family: 'Poppins', sans-serif;
-    background-color: #111;
-    color: #fff;
-    letter-spacing: 0.5px;
-    line-height: 1.5;
-    min-height: 100dvh;
-    overflow-x: hidden;
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	font-family: 'Poppins', sans-serif;
+	background-color: #111;
+	color: #fff;
+	letter-spacing: 0.5px;
+	line-height: 1.5;
+	min-height: 100dvh;
+	overflow: hidden;
 }
 
 
 #main-screen {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #1e1e1e;
-    background-image: url('../Images/Background_Wide.png');
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    padding: 40px 20px;
-    gap: 5vh;
-    position: absolute;
-    inset: 0;
-    border-radius: 15px;
-    z-index: 10;
-    
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #1e1e1e;
+	background-image: url('../Images/Background_Wide.png');
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	padding: 40px 20px;
+	gap: 5vh;
+	position: absolute;
+	inset: 0;
+	border-radius: 15px;
+	z-index: 10;
+
 }
 
 .SpinningBackground {
-    position: fixed;
-    background: linear-gradient(135deg, #d4af37, #ffd700);
-    background-color: #d4af37;
-    background-size: 400% 400%;
-    background-attachment: fixed;
-    animation: foilFlow 10s ease-in-out infinite;
-    width: 100vw;
-    height: 100dvh;
-    margin: 0;
-    padding: 30px;
-    color: black;
-    text-align: center;
-    z-index: -1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    will-change: background-position;
-    overflow: hidden;
+	position: fixed;
+	background: linear-gradient(135deg, #d4af37, #ffd700);
+	background-color: #d4af37;
+	background-size: 400% 400%;
+	background-attachment: fixed;
+	animation: foilFlow 10s ease-in-out infinite;
+	width: 100vw;
+	height: 100dvh;
+	margin: 0;
+	padding: 30px;
+	color: black;
+	text-align: center;
+	z-index: -1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	will-change: background-position;
+	overflow: hidden;
 }
 
 
 @keyframes foilFlow {
-    0%   { background-position: 0% 50%; }
-    50%  { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 #SpinningBackground::after {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: url('https://www.transparenttextures.com/patterns/stardust.png');
-    opacity: 0.2;
-    z-index: 1;
-    pointer-events: none;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url('https://www.transparenttextures.com/patterns/stardust.png');
+	opacity: 0.2;
+	z-index: 1;
+	pointer-events: none;
 }
 
 
 
 h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin: 0;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 15px 25px;
-    border-radius: 20px;
-    border:4px solid black;
-    box-shadow: 8px 8px 0px rgba(0,0,0,0.6);
+	font-size: 2.5rem;
+	font-weight: 600;
+	margin: 0;
+	color: black;
+	background-color: rgba(255, 255, 255, 0.85);
+	padding: 15px 25px;
+	border-radius: 20px;
+	border: 4px solid black;
+	box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6);
 }
 
 
 button {
-    padding: 18px 40px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 14px;
-    cursor: pointer;
-    opacity: 0.9;
-  
-    background: linear-gradient(135deg, #111, #222); 
-    color: #ffd700 !important;
-    border: 2px solid #ffd700;
-  
-    box-shadow: 8px 8px 0px rgba(0,0,0,0.6);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  button:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
-    background: linear-gradient(135deg, #222, #333);
-  }
-  
+	padding: 18px 40px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	border: none;
+	border-radius: 14px;
+	cursor: pointer;
+	opacity: 0.9;
 
-  button.glow {
-    animation: glow 1.5s infinite alternate ease-in-out;
-    }
+	background: linear-gradient(135deg, #111, #222);
+	color: #ffd700 !important;
+	border: 2px solid #ffd700;
 
-
-  @keyframes glow {
-    0% { box-shadow: 0 0 5px rgba(253, 236, 1, 0.6); }
-    50% { box-shadow: 0 0 15px rgb(226, 223, 7); }
-    100% { box-shadow: 0 0 5px rgba(200, 221, 8, 0.6); }
+	box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
- 
-  
+
+button:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
+	background: linear-gradient(135deg, #222, #333);
+}
+
+
+button.glow {
+	animation: glow 1.5s infinite alternate ease-in-out;
+}
+
+
+@keyframes glow {
+	0% {
+		box-shadow: 0 0 5px rgba(253, 236, 1, 0.6);
+	}
+
+	50% {
+		box-shadow: 0 0 15px rgb(226, 223, 7);
+	}
+
+	100% {
+		box-shadow: 0 0 5px rgba(200, 221, 8, 0.6);
+	}
+}
+
+
 
 .screen {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    inset: 0;
-    min-height: 100dvh;
-    padding: 30px 20px;
-    background-color: #1a1a1a;
-    color: white;
-    border-radius: 15px;
-    z-index: 9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	inset: 0;
+	min-height: 100dvh;
+	padding: 30px 20px;
+	background-color: #1a1a1a;
+	color: white;
+	border-radius: 15px;
+	z-index: 9;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .back-btn {
-    align-self: flex-start;
-    margin-bottom: 20px;
-    background-color: crimson;
+	align-self: flex-start;
+	margin-bottom: 20px;
+	background-color: crimson;
 }
 
 
-#play{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 60px 20px;
-    gap: 40px;
-    background-image: url('https://github.com/791747hnlhymt/scoutingApp2026Prototype/blob/main/Images/FRC%20Rebuilt%20Scouting%20App%20Background%20Playoffs.png?raw=true');
-    height: 50%;
-    background-size: cover;
-    background-position: center;
+#play {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 60px 20px;
+	gap: 40px;
+	background-image: url('https://github.com/791747hnlhymt/scoutingApp2026Prototype/blob/main/Images/FRC%20Rebuilt%20Scouting%20App%20Background%20Playoffs.png?raw=true');
+	height: 50%;
+	background-size: cover;
+	background-position: center;
 }
 
 #play .coral-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 90%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+	max-width: 90%;
 }
 
 .coral-buttons button {
-    width: 200px;
-    height: 150px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: black;
+	width: 200px;
+	height: 150px;
+	font-size: 1.1rem;
+	font-weight: bold;
+	color: black;
 }
 
-#qrscreen{
-    background-color:black;
-    width:200px;
-    height:200px;
+#qrscreen {
+	background-color: black;
+	width: 200px;
+	height: 200px;
 }
 
-#algae { background-color: lightgreen; }
-#l1Coral { background-color: white; }
-#l2Coral { background-color: teal; }
-#l3Coral { background-color: orange; }
-#l4Coral { background-color: pink; }
-#NetScore { background-color: lightblue; }
-#Proccessor { background-color: red; }
-#continue{background-color:green; width:150px; height:60px;}
+#algae {
+	background-color: lightgreen;
+}
 
-table {
-    border-collapse: collapse;
-    width: 100%;
-    border-radius: 12px;
-    overflow: hidden;
-  }
-  th {
-    background: #333;
-    color: #ffd700;
-  }
-  td {
-    background: #222;
-    color: #ddd;
-  }
-  
+#l1Coral {
+	background-color: white;
+}
+
+#l2Coral {
+	background-color: teal;
+}
+
+#l3Coral {
+	background-color: orange;
+}
+
+#l4Coral {
+	background-color: pink;
+}
+
+#NetScore {
+	background-color: lightblue;
+}
+
+#Proccessor {
+	background-color: red;
+}
 
 #continue {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background-color: lightgreen;
+	background-color: green;
+	width: 150px;
+	height: 60px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+th {
+	background: #333;
+	color: #ffd700;
+}
+
+td {
+	background: #222;
+	color: #ddd;
+}
+
+
+#continue {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	background-color: lightgreen;
 }
