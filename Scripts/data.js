@@ -1,5 +1,3 @@
-
-
 // Subjective submit logic
 document.getElementById('submitSubjective').addEventListener('click', () => {
 	const teamNumber = document.getElementById('teamNumber').value;
