@@ -1,6 +1,7 @@
 // Subjective submit logic
 document.getElementById('submitSubjective').addEventListener('click', () => {
 	const teamNumber = document.getElementById('teamNumber').value;
+	const matchNumber = document.getElementById('matchNumber').value;
 	const strategyNotes = document.getElementById('strategyNotes').value;
 	const driverSkill = document.getElementById('driverSkill').value;
 	const communication = document.getElementById('communication').value;
@@ -18,10 +19,16 @@ document.getElementById('submitSubjective').addEventListener('click', () => {
 		return;
 	}
 
+	if(!matchNumber) {
+		alert("Please enter the match number.");
+		return;
+	}
+
 	// I combined the data so it's easier to parse and requires only one QR Code, easier for simple & fast transfers
 	// - Eliana
 	const data = {
 		teamInfo: {
+			matchNumber,
 			teamNumber,
 			selectedAlliance,
 			strategyNotes,
