@@ -41,6 +41,11 @@ Things you need to do:
     5.Give the website a domain i suggest cloudflair or github(Both are free).
 
 
+If you are very new to web development basically there are three basic languages you must know html , CSS , java script. html is for the body of the website think of it as a google doc. CSS is the design of the website think of it as clothes to put on and look good. javascript is the brain all the logic is js.
+
+
+
+
 Project Logo:
 
 ![alt text](image.png)
