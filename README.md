@@ -40,4 +40,6 @@ This prototype allows you to be able to focus more on the robot than scouting. Y
 
 
 
+Project Logo:
 
+![alt text](image.png)
