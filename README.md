@@ -38,8 +38,7 @@ Things you need to do:
     2.improve on how you can collect data we only gave you a simple qr code.
     3.Change the design on how you think it would look better.
     4.Finish the PWA, We gave you the code to get started.
-
-
+    5.Give the website a domain i suggest cloudflair or github(Both are free).
 
 
 Project Logo:
