@@ -12,46 +12,45 @@ html, body {
 	overflow: hidden;
 }
 
-
 #main-screen {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background-color: #1e1e1e;
-	background-image: url('../Images/Background_Wide.png');
-	background-size: cover;
-	background-position: center;
-	text-align: center;
-	padding: 40px 20px;
-	gap: 5vh;
-	position: absolute;
-	inset: 0;
-	border-radius: 15px;
-	z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    background-image: url('../Images/Background_Wide.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 40px 20px;
+    gap: 5vh;
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+    z-index: 10;
 
 }
 
 .SpinningBackground {
 	position: fixed;
-	background: linear-gradient(135deg, #d4af37, #ffd700);
-	background-color: #d4af37;
-	background-size: 400% 400%;
-	background-attachment: fixed;
-	animation: foilFlow 10s ease-in-out infinite;
-	width: 100vw;
-	height: 100dvh;
-	margin: 0;
-	padding: 30px;
-	color: black;
-	text-align: center;
-	z-index: -1;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	will-change: background-position;
-	overflow: hidden;
+    background: linear-gradient(135deg, #d4af37, #ffd700);
+    background-color: #d4af37;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    animation: foilFlow 10s ease-in-out infinite;
+    width: 100vw;
+    height: 100dvh;
+    margin: 0;
+    padding: 30px;
+    color: black;
+    text-align: center;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    will-change: background-position;
+    overflow: hidden;
 }
 
 
