@@ -37,6 +37,10 @@ document.querySelectorAll('.back-btn').forEach(button => {
 });
 
 
+document.querySelectorAll('.back-btn2').forEach(button => {
+	button.addEventListener('click', () => showScreen('main'));
+});
+
 
 
 

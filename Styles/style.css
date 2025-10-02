@@ -213,18 +213,46 @@ h1 {
 	background-color: crimson;
 }
 
-.back-btn:hover {
-	transform: translateY(-4px);
-	background: linear-gradient(135deg, #222, #333);
-}
-
-
 
 .back-btn:hover {
 	transform: translateY(-4px);
 	box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
 	background: linear-gradient(135deg, #222, #333);
 }
+
+
+
+
+.back-btn2 {
+	align-self: flex-start;
+	margin-bottom: 20px;
+    padding: 18px 40px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	border: none;
+	border-radius: 14px;
+	cursor: pointer;
+	opacity: 0.9;
+
+	background: linear-gradient(135deg, #111, #222);
+	color: #ffd700 !important;
+	border: 2px solid #ffd700;
+
+	box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	background-color: crimson;
+
+	position: relative;
+	top:115px;
+	right:250px;
+}
+
+.back-btn2:hover {
+	transform: translateY(-4px);
+	background: linear-gradient(135deg, #222, #333);
+}
+
+
 
 #play {
 	display: flex;
