@@ -1,6 +1,8 @@
 // Subjective submit logic
 document.getElementById('submitSubjective').addEventListener('click', () => {
 	const teamNumber = document.getElementById('teamNumber').value;
+	const teamNumber2 = document.getElementById('teamNumber2').value;
+	const teamNumber3 = document.getElementById('teamNumber3').value;
 	const matchNumber = document.getElementById('matchNumber').value;
 	const strategyNotes = document.getElementById('strategyNotes').value;
 	const driverSkill = document.getElementById('driverSkill').value;
@@ -30,6 +32,8 @@ document.getElementById('submitSubjective').addEventListener('click', () => {
 		teamInfo: {
 			matchNumber,
 			teamNumber,
+			teamNumber2,
+			teamNumber3,
 			selectedAlliance,
 			strategyNotes,
 			driverSkill,
