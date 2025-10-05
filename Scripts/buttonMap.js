@@ -3,9 +3,11 @@ const screens = {
 	sub: document.getElementById('sub'),
 	obj: document.getElementById('obj'),
 	play: document.getElementById('play'),
-	dataScreen: document.getElementById('dataScreen') // Make sure this element exists!
+	dataScreen: document.getElementById('dataScreen'),
+	continueScreen: document.getElementById('continueScreen')
 };
 
+let objectiveCompleted = false;
 let subjectiveCompleted = false;
 let playCompleted = false;
 
@@ -19,14 +21,16 @@ function showScreen(screenName) {
 // Navigation buttons
 document.getElementById('Subjective').addEventListener('click', () => showScreen('sub'));
 document.getElementById('Objective').addEventListener('click', () => showScreen('obj'));
-
 document.getElementById('play-off').addEventListener('click', () => showScreen('play'));
 
+document.getElementById('continue').addEventListener('click', () => showScreen('continueScreen'));
+
+
 document.getElementById('robotData').addEventListener('click', () => {
-	if (subjectiveCompleted) {
+	if (subjectiveCompleted && objectiveCompleted) {
 		showScreen('dataScreen');
 	} else {
-		alert("Please complete both Subjective and Play-Off screens before proceeding to Robot Data.");
+		alert("Please complete both Objective and Subjective screens before proceeding to Robot Data.");
 	}
 });
 
@@ -36,26 +40,22 @@ document.querySelectorAll('.back-btn').forEach(button => {
 	button.addEventListener('click', () => showScreen('main'));
 });
 
-
 document.querySelectorAll('.back-btn2').forEach(button => {
 	button.addEventListener('click', () => showScreen('main'));
 });
 
-
-
-
+// Glow effect on buttons
 document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll("button");
-    buttons.forEach(button => {
-    button.addEventListener("mouseenter", () => {
-    button.classList.add("glow");
-});
+	const buttons = document.querySelectorAll("button");
+	buttons.forEach(button => {
+		button.addEventListener("mouseenter", () => {
+			button.classList.add("glow");
+		});
 
-button.addEventListener("mouseleave", () => {
-        setTimeout(() => {
-            button.classList.remove("glow");
-            }, 1000); // Glows for 1 second after leaving
-        });
-    });
+		button.addEventListener("mouseleave", () => {
+			setTimeout(() => {
+				button.classList.remove("glow");
+			}, 1000); // Glows for 1 second after leaving
+		});
+	});
 });
-

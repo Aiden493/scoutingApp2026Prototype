@@ -1,17 +1,31 @@
-// Subjective submit logic
+// Subjective submit logic and objective logic
 document.getElementById('submitSubjective').addEventListener('click', () => {
+
+
+	const ObjectiveMatchNumber = document.getElementById("ObjectiveMatchNumber").value;
+    const ScoutersNameObjective = document.getElementById("ScoutersNameObjective").value;
+    const ObjectiveTeamNumber = document.getElementById("ObjectiveTeamNumber").value;
+
 	const teamNumber = document.getElementById('teamNumber').value;
 	const teamNumber2 = document.getElementById('teamNumber2').value;
 	const teamNumber3 = document.getElementById('teamNumber3').value;
 	const matchNumber = document.getElementById('matchNumber').value;
+	
 	const strategyNotes = document.getElementById('strategyNotes').value;
 	const driverSkill = document.getElementById('driverSkill').value;
 	const communication = document.getElementById('communication').value;
 	const reliability = document.getElementById('reliability').value;
 
+	
+
 	const selectedAlliance = document.getElementById('redAlliance').classList.contains('selected') ? 'Red' :
 		document.getElementById('blueAlliance').classList.contains('selected') ? 'Blue' :
 			'None';
+
+	const selectedAlliance2 = document.getElementById('ObjectiveRedAllience').classList.contains('selected') ? 'Red' :
+		document.getElementById('ObjectiveBlueAllience').classList.contains('selected') ? 'Blue' :
+			'None';
+	
 
 	if (!teamNumber) {
 		alert("Please enter a team number.");
@@ -20,9 +34,28 @@ document.getElementById('submitSubjective').addEventListener('click', () => {
 		alert("Please enter the team's strategy.");
 		return;
 	}
-
-	if(!matchNumber) {
-		alert("Please enter the match number.");
+	else if (selectedAlliance === 'None') {
+		alert("Please select an alliance color.");
+		return;
+	}
+	else if (!matchNumber) {
+		alert("please enter a match number.");
+		return;
+	}
+	else if (!ObjectiveTeamNumber) {
+		alert("please enter the Objective Team Number.");
+		return;
+	}
+	else if (!ObjectiveMatchNumber) {
+		alert("please enter the Objective Match Number.");
+		return;
+	}
+	else if (selectedAlliance2 === 'None') {
+		alert("please select the Objective alliance color.");
+		return;
+	}
+	else if (!ScoutersNameObjective) {
+		alert("please enter the Scouters Name.");
 		return;
 	}
 
@@ -38,17 +71,19 @@ document.getElementById('submitSubjective').addEventListener('click', () => {
 			strategyNotes,
 			driverSkill,
 			communication,
-			reliability
+			reliability,
+			ObjectiveMatchNumber,
+            ObjectiveTeamNumber,
+            ScoutersNameObjective,
+            selectedAlliance2,
 		},
 		scores: {
-			algae,
-			l1Coral,
-			l2Coral,
-			l3Coral,
-			l4Coral,
-			NetScore,
-			Proccessor
+			coralButtons: Array.from(document.querySelectorAll('.coral-buttons button')).map(button => ({
+				name: button.dataset.originalText,
+				count: parseInt(button.dataset.count)
+			}))
 		}
+	
 	};
 	
 	console.log("Subjective Data Submitted:", data);
