@@ -12,14 +12,14 @@
 	vertical-align: middle;
 }
 
-#redAlliance {
+#redAlliance , #ObjectiveRedAllience {
 	background-color: red;
 	background-image: url('https://github.com/791747hnlhymt/scoutingApp2026Prototype/blob/main/Images/Scouting%20App%20Red%20Alliance%20Button%20Background-1.png?raw=true');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
-#blueAlliance {
+#blueAlliance , #ObjectiveBlueAllience {
 	background-color: blue;
 	background-image: url('https://github.com/791747hnlhymt/scoutingApp2026Prototype/blob/main/Images/Scouting%20App%20Blue%20Alliance%20Button%20Background.png?raw=true');
 	background-repeat: no-repeat;
@@ -55,6 +55,7 @@
 .form-section {
 	display: flex;
 	flex-direction: column;
+	gap: 10px;
 }
 
 .form-section label {
@@ -124,12 +125,4 @@ th,
 td {
 	padding: 8px;
 	text-align: left;
-}
-
-#obj{
-	margin: 20px;
-	display:flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 20px;
 }

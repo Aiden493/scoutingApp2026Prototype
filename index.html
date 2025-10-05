@@ -21,6 +21,45 @@
 			<button id="robotData" class="buttonTwo">ROBOT DATA</button>
 		</div>
 
+
+		<div id="obj" class="screen">
+			<div id = "ObjectiveForm"></div>
+			<h2>Objective Scouting</h2>
+	
+			<div class="form-section">
+				<label for="ObjectiveMatchNumber">Match Number: </label>
+				<input type="number" id="ObjectiveMatchNumber" placeholder="Enter Match Number" required>
+				<br>
+				<label for="ObjectiveTeamNumber">Team Number: </label>
+				<input type="number" id="ObjectiveTeamNumber" placeholder="Enter Team Number" required> 
+			</div>
+	
+			<div class="form-section alliance-buttons">
+				<label>Alliance:</label>
+				<div class="alliance-choice">
+					<button id="ObjectiveRedAllience" class="button">Red</button>
+					<button id="ObjectiveBlueAllience" class="button">Blue</button>
+				</div>
+			</div>
+	
+			<div class="form-section">
+				<label for="ScoutersNameObjective">Scouter's Name:</label>
+				<textarea id="ScoutersNameObjective" rows="1" placeholder="Put in your name."></textarea>
+			</div>
+	
+			<button id="submitObjective" class="button" color="yellow">Submit</button>
+			<button id="continue" class="button" color="yellow">Continue</button>
+			<button class="back-btn button" color="yellow">Back</button>
+		</div>
+	
+		<div id="continueScreen" class="screen">
+			<div class="image-row">
+				<img src="./Images/Red_Alliance_BG.png">
+				<img src="./Images/Blue_Alliance_BG.png"> 
+			</div>
+		</div>
+
+
 		<div id="sub" class="screen">
 			<div id="subjective-form">
 				<h2>Subjective Scouting</h2>
@@ -72,44 +111,6 @@
 			</div>
 		</div>
 
-		<button id="continue" class="button">Continue</button>
-
-		<div id="obj" class="screen">
-			<div id = "ObjectiveForm"></div>
-			<h2>Objective Scouting</h2>
-	
-			<div class="form-section">
-				<label for="ObjectiveMatchNumber">Match Number: </label>
-				<input type="number" id="ObjectiveMatchNumber" placeholder="Enter Match Number" required>
-				<br>
-				<label for="ObjectiveTeamNumber">Team Number: </label>
-				<input type="number" id="ObjectiveTeamNumber" placeholder="Enter Team Number" required> 
-			</div>
-	
-			<div class="form-section alliance-buttons">
-				<label>Alliance:</label>
-				<div class="alliance-choice">
-					<button id="ObjectiveRedAllience" class="button">Red</button>
-					<button id="ObjectiveBlueAllience" class="button">Blue</button>
-				</div>
-			</div>
-	
-			<div class="form-section">
-				<label for="ScoutersNameObjective">Scouter's Name:</label>
-				<textarea id="ScoutersNameObjective" rows="2" placeholder="Put in your name."></textarea>
-			</div>
-	
-			<button id="submitObjective" class="button" color="yellow">Submit</button>
-			<button id="continue" class="button" color="yellow">Continue</button>
-			<button class="back-btn button" color="yellow">Back</button>
-		</div>
-	
-		<div id="continueScreen" class="screen">
-			<div class="image-row">
-				<img src="./Images/Red_Alliance_BG.png">
-				<img src="./Images/Blue_Alliance_BG.png"> 
-			</div>
-		</div>
 
 		<div id="play" class="screen ">
 			<button class="back-btn">Go Back</button>
