@@ -98,12 +98,14 @@ document.getElementById('submitSubjective').addEventListener('click', () => {
 	// Generate new QR code
 	new QRCode(qrCodeContainer, {
 		text: JSON.stringify(data),
-		width: 128,
-		height: 128,
+		width: 208,
+		height: 228,
 		colorDark: "#000000",
 		colorLight: "#ffffff",
 		correctLevel: QRCode.CorrectLevel.L
 	});
+
+	
 
 	document.getElementById("outputData").style.display = "block";
 	// document.getElementById('outputData2').innerHTML = `<pre>${JSON.stringify(data2, null, 2)}</pre>`;
