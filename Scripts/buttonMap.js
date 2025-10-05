@@ -23,7 +23,7 @@ document.getElementById('Subjective').addEventListener('click', () => showScreen
 document.getElementById('Objective').addEventListener('click', () => showScreen('obj'));// shoes objective screen
 document.getElementById('play-off').addEventListener('click', () => showScreen('play'));// shows play screen
 
-document.getElementById('continue').addEventListener('click', () => showScreen('continueScreen'));// shows interactive game map screen
+document.getElementById('contueBtn').addEventListener('click', () => showScreen('continueScreen'));// shows interactive game map screen
 
 
 document.getElementById('robotData').addEventListener('click', () => {// robot data completion logic
