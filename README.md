@@ -22,8 +22,8 @@ The reason why we chose to make a website and not an app is because websites are
 
 How do we collect the data?
 
-after filling out information on the previous screens both Subjective and play-off you will be able to access robot data and you will be given a qr code that will give you all the information you need but
-do not search it up instead view the preview information copy it and paste it in a doc like notes app
+after filling out information on the previous screens both Subjective and Objective you will be able to access robot data and you will be given a qr code that will give you all the information you need but
+do not search it up instead view the preview information copy it and paste it in a doc like notes app 
 
 
 How can this help?
