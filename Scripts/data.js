@@ -3,20 +3,20 @@ document.getElementById('submitSubjective').addEventListener('click', () => {
 
 
 	const ObjectiveMatchNumber = document.getElementById("ObjectiveMatchNumber").value; // Added to get Objective Match Number 
-    const ScoutersNameObjective = document.getElementById("ScoutersNameObjective").value;// Added to get Scouters Name
-    const ObjectiveTeamNumber = document.getElementById("ObjectiveTeamNumber").value;// Added to get Objective Team Number
+	const ScoutersNameObjective = document.getElementById("ScoutersNameObjective").value;// Added to get Scouters Name
+	const ObjectiveTeamNumber = document.getElementById("ObjectiveTeamNumber").value;// Added to get Objective Team Number
 
 	const teamNumber = document.getElementById('teamNumber').value;// Get Team Number
 	const teamNumber2 = document.getElementById('teamNumber2').value;// Get the second Team Number
 	const teamNumber3 = document.getElementById('teamNumber3').value;// get the third Team Number
 	const matchNumber = document.getElementById('matchNumber').value;// get the match number
-	
+
 	const strategyNotes = document.getElementById('strategyNotes').value;// get the strategy notes from subjective
 	const driverSkill = document.getElementById('driverSkill').value;// get the driver skill from sunjective
 	const communication = document.getElementById('communication').value;//get the communication from subjective
 	const reliability = document.getElementById('reliability').value;// get the reliability from subjective
 
-	
+
 
 	const selectedAlliance = document.getElementById('redAlliance').classList.contains('selected') ? 'Red' :// check if red alliance is selected subjective
 		document.getElementById('blueAlliance').classList.contains('selected') ? 'Blue' :// check if blue alliance is selected subjective
@@ -25,7 +25,7 @@ document.getElementById('submitSubjective').addEventListener('click', () => {
 	const selectedAlliance2 = document.getElementById('ObjectiveRedAllience').classList.contains('selected') ? 'Red' :// check if red alliance is selected objective
 		document.getElementById('ObjectiveBlueAllience').classList.contains('selected') ? 'Blue' :// check if blue alliance is slected objective
 			'None';// if none are slected , return none
-	
+
 
 	if (!teamNumber) {// if team number is not entered
 		alert("Please enter a team number.");// alert user
@@ -59,9 +59,21 @@ document.getElementById('submitSubjective').addEventListener('click', () => {
 		return;// makes the user fill out the requred fields
 	}
 
-	// I combined the data so it's easier to parse and requires only one QR Code, easier for simple & fast transfers
+	// Score buttons
+	const scores = Array.from(document.querySelectorAll('.coral-buttons button'))
+		.map(button => ({
+			name: button.dataset.originalText,
+			count: parseInt(button.dataset.count)
+		}))
+		.reduce((acc, { name, count }) => {
+			acc[name] = count;
+			return acc;
+		}, {}
+	);
+
+	// Had to seperate the QR Codes so they can be scanable easily
 	// - Eliana
-	const data = {// creates list of data to be stored in qr code
+	const subjectiveData = {// creates list of data to be stored in qr code
 		teamInfo: {
 			matchNumber,// match number
 			teamNumber,// team number
@@ -72,40 +84,49 @@ document.getElementById('submitSubjective').addEventListener('click', () => {
 			driverSkill,// driver skill
 			communication,//communication
 			reliability,// reliability
-			ObjectiveMatchNumber,// objective match number
-            ObjectiveTeamNumber,// objective team number
-            ScoutersNameObjective,// scouters name
-            selectedAlliance2,// slected objective alliance 
 		},
-		scores: {
-			coralButtons: Array.from(document.querySelectorAll('.coral-buttons button')).map(button => ({// get all the coral buttons and their data
-				name: button.dataset.originalText,// name of the button
-				count: parseInt(button.dataset.count)// count of the button
-			}))
-		}
-	
+		scores
 	};
-	
-	console.log("Subjective Data Submitted:", data);// log the data to console for testing
+
+	const objectiveData = {
+		ObjectiveMatchNumber,// objective match number
+		ObjectiveTeamNumber,// objective team number
+		ScoutersNameObjective,// scouters name
+		selectedAlliance2,// slected objective alliance 
+	}
+
+	console.log("Subjective Data Submitted:", subjectiveData);// log the data to console for testing
 	alert("Subjective data saved!");// alert user
 	subjectiveCompleted = true;// set subjective completed to true
 
 	console.log("Updating QRCode!")// log to console for testing
 	// Clear previous QR code
-	const qrCodeContainer = document.getElementById('qrcode');// get the qr code container
-	qrCodeContainer.innerHTML = '';// clear the qr code container
+	const objectiveContainer  = document.getElementById('objQRCode');
+	const subjectiveContainer = document.getElementById('subQRCode');
+	objectiveContainer.innerHTML = '';
+	subjectiveContainer.innerHTML = '';
 
-	// Generate new QR code
-	new QRCode(qrCodeContainer, {// generate new qr code
-		text: JSON.stringify(data),// text to be stored in the qr code
-		width: 208,// width of the qr code
-		height: 228,// height of the qr code
-		colorDark: "#000000",// dark color of the qr code
-		colorLight: "#ffffff",// light color of the qr code
-		correctLevel: QRCode.CorrectLevel.L// high correction level
+	// Subjective QR Code
+	new QRCode(subjectiveContainer, {
+		text: JSON.stringify(subjectiveData),
+		width: 208,
+		height: 228,
+		colorDark: "#000000",
+		colorLight: "#ffffff",
+		correctLevel: QRCode.CorrectLevel.L
+	});
+	
+	// Objective QR Code
+	new QRCode(objectiveContainer, {
+		text: JSON.stringify(objectiveData),
+		width: 208,
+		height: 228,
+		colorDark: "#000000",
+		colorLight: "#ffffff",
+		correctLevel: QRCode.CorrectLevel.L
 	});
 
-	
+
 
 	document.getElementById("outputData").style.display = "block";// display the output data container
 });
