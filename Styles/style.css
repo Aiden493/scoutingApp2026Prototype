@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -12,7 +11,6 @@ body {
 	min-height: 100dvh;
 	overflow: hidden;
 }
-
 
 #main-screen {
 	display: flex;
@@ -30,6 +28,7 @@ body {
 	inset: 0;
 	z-index: 10;
 }
+
 
 .SpinningBackground {
 	position: fixed;
@@ -95,6 +94,7 @@ h1 {
 	background: linear-gradient(135deg, #111, #222);
 	color: #ffd700 !important;
 	border: 2px solid #ffd700;
+    outline:white 5px;
 
 	box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6);
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -198,18 +198,46 @@ h1 {
 	background-color: crimson;
 }
 
-.back-btn:hover {
-	transform: translateY(-4px);
-	background: linear-gradient(135deg, #222, #333);
-}
-
-
 
 .back-btn:hover {
 	transform: translateY(-4px);
 	box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
 	background: linear-gradient(135deg, #222, #333);
 }
+
+
+
+
+.back-btn2 {
+	align-self: flex-start;
+	margin-bottom: 20px;
+    padding: 18px 40px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	border: none;
+	border-radius: 14px;
+	cursor: pointer;
+	opacity: 0.9;
+
+	background: linear-gradient(135deg, #111, #222);
+	color: #ffd700 !important;
+	border: 2px solid #ffd700;
+
+	box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	background-color: crimson;
+
+	position: relative;
+	top:190px;
+	right:230px;
+}
+
+.back-btn2:hover {
+	transform: translateY(-4px);
+	background: linear-gradient(135deg, #222, #333);
+}
+
+
 
 #play {
 	display: flex;
@@ -246,61 +274,3 @@ h1 {
 	height: 200px;
 }
 
-#algae {
-	background-color: lightgreen;
-}
-
-#l1Coral {
-	background-color: white;
-}
-
-#l2Coral {
-	background-color: teal;
-}
-
-#l3Coral {
-	background-color: orange;
-}
-
-#l4Coral {
-	background-color: pink;
-}
-
-#NetScore {
-	background-color: lightblue;
-}
-
-#Proccessor {
-	background-color: red;
-}
-
-#continue {
-	background-color: green;
-	width: 150px;
-	height: 60px;
-}
-
-table {
-	border-collapse: collapse;
-	width: 100%;
-	border-radius: 12px;
-	overflow: hidden;
-}
-
-th {
-	background: #333;
-	color: #ffd700;
-}
-
-td {
-	background: #222;
-	color: #ddd;
-}
-
-
-#continue {
-	position: absolute;
-	bottom: 20px;
-	right: 20px;
-	background-color: lightgreen;
-}
