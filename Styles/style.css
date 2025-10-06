@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -32,27 +33,24 @@ html, body {
 
 .SpinningBackground {
 	position: fixed;
-	top: 0;
-	left: 0;
+	background: linear-gradient(135deg, #d4af37, #ffd700);
+	background-color: #d4af37;
+	background-size: 400% 400%;
+	background-attachment: fixed;
+	animation: foilFlow 10s ease-in-out infinite;
 	width: 100vw;
 	height: 100dvh;
-	background-size: 400% 400%;
-	animation: foilFlow 10s ease-in-out infinite;
-	z-index: 0;
-	pointer-events: none;
-}
-
-.SpinningBackground::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	opacity: 0.2;
-	z-index: 1;
-	pointer-events: none;
-	background-size: inherit;
+	margin: 0;
+	padding: 30px;
+	color: black;
+	text-align: center;
+	z-index: -1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	will-change: background-position;
+	overflow: hidden;
 }
 
 @keyframes foilFlow {
@@ -94,7 +92,7 @@ h1 {
 	background: linear-gradient(135deg, #111, #222);
 	color: #ffd700 !important;
 	border: 2px solid #ffd700;
-    outline:white 5px;
+	outline: white 5px;
 
 	box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6);
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -173,7 +171,6 @@ h1 {
 	padding: 30px 20px;
 	background-color: #1a1a1a;
 	color: white;
-	border-radius: 15px;
 	z-index: 9;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
@@ -211,7 +208,7 @@ h1 {
 .back-btn2 {
 	align-self: flex-start;
 	margin-bottom: 20px;
-    padding: 18px 40px;
+	padding: 18px 40px;
 	font-size: 1.2rem;
 	font-weight: bold;
 	border: none;
@@ -228,8 +225,8 @@ h1 {
 	background-color: crimson;
 
 	position: relative;
-	top:190px;
-	right:230px;
+	top: 190px;
+	right: 230px;
 }
 
 .back-btn2:hover {
@@ -273,4 +270,3 @@ h1 {
 	width: 200px;
 	height: 200px;
 }
-
