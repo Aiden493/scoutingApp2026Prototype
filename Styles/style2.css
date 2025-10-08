@@ -1,37 +1,3 @@
-#algae {
-	background-color: lightgreen;
-}
-
-#l1Coral {
-	background-color: white;
-}
-
-#l2Coral {
-	background-color: teal;
-}
-
-#l3Coral {
-	background-color: orange;
-}
-
-#l4Coral {
-	background-color: pink;
-}
-
-#NetScore {
-	background-color: lightblue;
-}
-
-#Proccessor {
-	background-color: red;
-}
-
-#continue {
-	background-color: green;
-	width: 150px;
-	height: 60px;
-}
-
 table {
 	border-collapse: collapse;
 	width: 100%;
@@ -47,14 +13,6 @@ th {
 td {
 	background: #222;
 	color: #ddd;
-}
-
-
-#continue {
-	position: absolute;
-	bottom: 20px;
-	right: 20px;
-	background-color: lightgreen;
 }
 
 #resetCounts {
@@ -85,17 +43,6 @@ td {
 		height: auto;
 		padding: 15px;
 		font-size: 1rem;
-	}
-
-	#algae,
-	#l1Coral,
-	#l2Coral,
-	#l3Coral,
-	#l4Coral,
-	#NetScore,
-	#Proccessor {
-		color: black !important;
-		font-weight: bold;
 	}
 
 	#allianceSelector {

@@ -1,0 +1,153 @@
+
+
+#main-screen {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-image: url('../Images/Background_Wide.png');
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	padding: 40px 20px;
+	gap: 5vh;
+	position: absolute;
+	inset: 0;
+	z-index: 10;
+}
+
+
+.ScrollingBG {
+	position: fixed;
+	background-repeat: repeat;
+	animation: scroll 20s linear infinite;
+	z-index: -1;
+}
+
+@keyframes scroll {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 100vw 0;
+	}
+}
+
+
+
+
+
+
+
+
+.screen {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	inset: 0;
+	min-height: 100dvh;
+	padding: 30px 20px;
+	background-color: #1a1a1a;
+	color: white;
+	z-index: 9;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.back-btn {
+	align-self: flex-start;
+	margin-bottom: 20px;
+	padding: 18px 40px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	border: none;
+	border-radius: 14px;
+	cursor: pointer;
+	opacity: 0.9;
+
+	background: linear-gradient(135deg, #111, #222);
+	color: #ffd700 !important;
+	border: 2px solid #ffd700;
+
+	box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	background-color: crimson;
+}
+
+
+.back-btn:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
+	background: linear-gradient(135deg, #222, #333);
+}
+
+
+
+
+.back-btn2 {
+	align-self: flex-start;
+	margin-bottom: 20px;
+	padding: 18px 40px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	border: none;
+	border-radius: 14px;
+	cursor: pointer;
+	opacity: 0.9;
+
+	background: linear-gradient(135deg, #111, #222);
+	color: #ffd700 !important;
+	border: 2px solid #ffd700;
+
+	box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	background-color: crimson;
+
+	position: relative;
+	top: 450px;
+	right: 230px;
+}
+
+.back-btn2:hover {
+	transform: translateY(-4px);
+	background: linear-gradient(135deg, #222, #333);
+}
+
+
+
+#play {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 60px 20px;
+	gap: 40px;
+	background-image: url('https://github.com/791747hnlhymt/scoutingApp2026Prototype/blob/main/Images/FRC%20Rebuilt%20Scouting%20App%20Background%20Playoffs.png?raw=true');
+	height: 50%;
+	background-size: cover;
+	background-position: center;
+}
+
+#play .coral-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+	max-width: 90%;
+}
+
+.coral-buttons button {
+	width: 200px;
+	height: 150px;
+	font-size: 1.1rem;
+	font-weight: bold;
+	color: black;
+}
+
+#qrscreen {
+	background-color: black;
+	width: 200px;
+	height: 200px;
+}
+

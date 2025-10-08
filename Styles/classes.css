@@ -1,0 +1,32 @@
+.QRCode {
+	margin-bottom: 10px;
+}
+
+.MenuButton {
+	border: 0;
+}
+
+.Form {
+	padding: 2vh;
+	padding-right: 5vh;
+
+	margin: 0;
+	margin-top: -5vh;
+	
+	max-width: 30vw;
+	max-height: 90vh;
+	width: 100%;
+	gap: 20px;
+
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+
+	overflow-x: hidden;
+	overflow-y: auto;
+	
+	color: white;
+	background-color: #2a2a2a;
+	
+	border-radius: 15px;
+}
