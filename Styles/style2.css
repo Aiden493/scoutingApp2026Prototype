@@ -26,38 +26,6 @@ td {
     margin-top: 20px;
 }
 
-
-@media (max-width: 768px) {
-
-	#main-screen,
-	.screen {
-		padding: 20px;
-	}
-
-	button {
-		width: 90%;
-	}
-
-	.coral-buttons button {
-		width: 45%;
-		height: auto;
-		padding: 15px;
-		font-size: 1rem;
-	}
-
-	#allianceSelector {
-		position: relative;
-		margin-top: 20px;
-		top: 100px;
-	}
-
-	#blueAlliance {
-		position: static;
-		margin: 20px 0;
-	}
-}
-
-
 #obj{
 	margin: 20px;
 	display:flex;
@@ -90,8 +58,6 @@ td {
 #obj td{
 	color:black;
 }
-
-
 
 #obj .image-row {
 	display: flex;

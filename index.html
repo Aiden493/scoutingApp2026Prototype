@@ -2,29 +2,24 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href= "./Styles/classes.css">
-		<link rel="stylesheet" href= "./Styles/ids.css">
-		<link rel="stylesheet" href= "./Styles/style.css">
-		<link rel="stylesheet" href= "./Styles/temp.css">
-		<link rel="stylesheet" href= "./Styles/style2.css">
-		<link rel = "stylesheet" href = "./Styles/stylee3.css">
-		<link rel="manifest" href="/manifest.json">
+		<meta name ="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href = "https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+		<link rel  = "stylesheet" href= "./Styles/classes.css">
+		<link rel  = "stylesheet" href= "./Styles/ids.css">
+		<link rel  = "stylesheet" href= "./Styles/style.css">
+		<link rel  = "stylesheet" href= "./Styles/style2.css">
+		<link rel  = "stylesheet" href = "./Styles/stylee3.css">
 
-
-		<title>FRC 2026 Scouting Prototype</title>
+		<title>[TEAM NUMBER] Scouting</title>
 	</head>
 	<body>
 		<div id="main-screen" class="ScrollingBG">
-			<h1>Scouting prototype for 2026</h1>
+			<h1>[TEAM NUMBER] Scouting</h1>
 			<button id="Objective" class="MenuButton">OBJECTIVE</button>
 			<button id="Subjective" class="MenuButton">SUBJECTIVE</button>
 			<button id="play-off" class="MenuButton">PLAY OFF</button>
 			<button id="robotData" class="MenuButton">ROBOT DATA</button>
 		</div>
-
-
 		<div id="obj" class="screen">
 			<div class="Form" id="ObjectiveForm"></div>
 			<h2>Objective Scouting</h2>
@@ -54,7 +49,6 @@
 			<button class = "button" id = "contueBtn" color = "yellow">Continue</button>
 			<button class="back-btn button" color="yellow">Back</button>
 		</div>
-	
 		<div id="continueScreen" class="screen">
 			<div class="image-row">
 				<button class = "back-btn button" color = "yellow">Back</button>
@@ -62,8 +56,6 @@
 				<img src="./Images/Blue_Alliance_BG.png"> 
 			</div>
 		</div>
-
-
 		<div id="sub" class="screen">
 			<div class="Form" id="subjective-form">
 				<h2>Subjective Scouting</h2>
@@ -114,8 +106,6 @@
 				<button class="back-btn" color = "yellow" class = "button">Back</button>
 			</div>
 		</div>
-
-
 		<div id="play" class="screen ">
 			<button class="back-btn">Go Back</button>
 			<div class="coral-buttons">
@@ -129,7 +119,6 @@
 			</div>
 			<button id="resetCounts" >Reset Counts</button>
 		</div>
-
 		<!-- Corrected and added QR code section -->
 		<div id="dataScreen" style="margin-top: 40px; padding: 10px; border: 1px solid #ccc;">
 			<h2>Generate QR Code</h2>
@@ -146,23 +135,9 @@
 		<script src = "./Scripts/buttonMap.js"></script>
 		<script src = "./Scripts/coralButtonsLogic.js"></script>
 		<script src = "./Scripts/data.js"></script>
-		<script src = "./Scripts/Pwa.js"></script>
-		<script src = "./Scripts/server.js"></script>
-
-
-		<script>
-			if ('serviceWorker' in navigator) {
-			  window.addEventListener('load', () => {
-				navigator.serviceWorker.register('/Pwa.js')
-				  .then(reg => console.log('working', reg))
-				  .catch(err => console.error('Not working', err));
-			  });
-			}
-		  </script>
 
 		<!--    QR Code Library by Shim Sangmin      -->
 		<!-- https://github.com/davidshimjs/qrcodejs -->
-		<script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
-		
+		<script src = "https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
 	</body>
 </html>

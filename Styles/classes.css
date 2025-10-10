@@ -30,3 +30,61 @@
 	
 	border-radius: 15px;
 }
+
+.back-btn {
+	align-self: flex-start;
+	margin-bottom: 20px;
+	padding: 18px 40px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	border: none;
+	border-radius: 14px;
+	cursor: pointer;
+	opacity: 0.9;
+
+	background: linear-gradient(135deg, #111, #222);
+	color: #ffd700 !important;
+	border: 2px solid #ffd700;
+
+	box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	background-color: crimson;
+}
+
+
+.back-btn:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
+	background: linear-gradient(135deg, #222, #333);
+}
+
+.screen {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	inset: 0;
+	min-height: 100dvh;
+	padding: 30px 20px;
+	background-color: #1a1a1a;
+	color: white;
+	z-index: 9;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.ScrollingBG {
+	position: fixed;
+	background-repeat: repeat;
+	animation: scroll 20s linear infinite;
+	z-index: -1;
+}
+
+@keyframes scroll {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 100vw 0;
+	}
+}

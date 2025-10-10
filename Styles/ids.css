@@ -1,0 +1,43 @@
+/* Main Screen */
+#main-screen {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-image: url('../Images/Background_Wide.png');
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	padding: 40px 20px;
+	gap: 5vh;
+	position: absolute;
+	inset: 0;
+	z-index: 10;
+}
+
+/* Objective */
+
+
+/* Subjective */
+
+
+/* Playoffs */
+#play {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 60px 20px;
+	gap: 40px;
+	background-image: url('https://github.com/791747hnlhymt/scoutingApp2026Prototype/blob/main/Images/FRC%20Rebuilt%20Scouting%20App%20Background%20Playoffs.png?raw=true');
+	height: 50%;
+	background-size: cover;
+	background-position: center;
+}
+
+/* Robot Data */
+#qrscreen {
+	background-color: black;
+	width: 200px;
+	height: 200px;
+}
