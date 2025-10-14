@@ -23,7 +23,7 @@ document.getElementById('Subjective').addEventListener('click', () => showScreen
 document.getElementById('Objective').addEventListener('click', () => showScreen('obj'));// shoes objective screen
 document.getElementById('play-off').addEventListener('click', () => showScreen('play'));// shows play screen
 
-document.getElementById('contueBtn').addEventListener('click', () => showScreen('continueScreen'));// shows interactive game map screen
+document.getElementById('continueBtn').addEventListener('click', () => showScreen('continueScreen'));// shows interactive game map screen
 
 
 document.getElementById('robotData').addEventListener('click', () => {// robot data completion logic
@@ -37,10 +37,6 @@ document.getElementById('robotData').addEventListener('click', () => {// robot d
 
 // Back buttons return to main
 document.querySelectorAll('.back-btn').forEach(button => {// select all back buttons
-	button.addEventListener('click', () => showScreen('main'));// on click, show main screen
-});
-
-document.querySelectorAll('.back-btn2').forEach(button => {// select all back buttons2
 	button.addEventListener('click', () => showScreen('main'));// on click, show main screen
 });
 

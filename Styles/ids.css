@@ -17,7 +17,6 @@
 
 /* Objective */
 
-
 /* Subjective */
 
 
@@ -29,7 +28,7 @@
 	align-items: center;
 	padding: 60px 20px;
 	gap: 40px;
-	background-image: url('https://github.com/791747hnlhymt/scoutingApp2026Prototype/blob/main/Images/FRC%20Rebuilt%20Scouting%20App%20Background%20Playoffs.png?raw=true');
+	background-image: url("../Images/Playoffs_BG.png");
 	height: 50%;
 	background-size: cover;
 	background-position: center;
@@ -40,4 +39,50 @@
 	background-color: black;
 	width: 200px;
 	height: 200px;
+}
+#dataScreen {
+	max-width: 600px;
+	width: 100%;
+	margin: 1rem auto;
+	padding: 1.5rem;
+	background: #FFF8DC;
+	border-radius: 15px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+	color: #5C4033;
+	font-family: "Poppins", sans-serif;
+	text-align: center;
+}
+
+
+#redAlliance, #blueAlliance {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	border: none;
+	font-size: 16px;
+	border-radius: 5px;
+	cursor: pointer;
+	color: white;
+	margin-right: 10px;
+	/* Small gap between buttons */
+	vertical-align: middle;
+}
+
+#redAlliance, #ObjectiveRedAllience {
+	background-color: red;
+	background-image: url("../Images/Red_Alliance_Button.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#blueAlliance, #ObjectiveBlueAllience {
+	background-color: blue;
+	background-image: url("../Images/Blue_Alliance_Button.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#redAlliance:focus, #blueAlliance:focus {
+	border: 7px solid white;
+	outline: none;
 }
