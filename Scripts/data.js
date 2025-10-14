@@ -58,7 +58,7 @@ document.getElementById('submitSubjective').addEventListener('click', () => {
 	}
 
 	// Score buttons
-	const scores = Array.from(document.querySelectorAll('.coral-buttons button'))
+	const scores = Array.from(document.querySelectorAll('#score-buttons button'))
 		.map(button => ({
 			name: button.dataset.originalText,
 			count: parseInt(button.dataset.count)
@@ -69,28 +69,34 @@ document.getElementById('submitSubjective').addEventListener('click', () => {
 		}, {}
 	);
 
+	/* 
+		Something about this data we should mention, if you add TOO MUCH data, the QRCode will fail to scan (at least for my Samsung S23 Phone)
+		The QRCode Module we're using is a bit outdated so it can't make a QRCode if it's above a certain threshold despite having space.
+			- Eliana
+	*/
+
 	// Had to seperate the QR Codes so they can be scanable easily
 	// - Eliana
 	const subjectiveData = {// creates list of data to be stored in qr code
 		teamInfo: {
-			matchNumber,// match number
-			teamNumber,// team number
-			teamNumber2,// second team number 
-			teamNumber3,// third team number
-			selectedAlliance,// selected alliance
-			strategyNotes,// strategy notes
-			driverSkill,// driver skill
-			communication,//communication
-			reliability,// reliability
+			matchNumber,
+			teamNumber,
+			teamNumber2,
+			teamNumber3,
+			selectedAlliance,
+			strategyNotes,
+			driverSkill,
+			communication,
+			reliability,
 		},
 		scores
 	};
 
 	const objectiveData = {
-		ObjectiveMatchNumber,// objective match number
-		ObjectiveTeamNumber,// objective team number
-		ScoutersNameObjective,// scouters name
-		selectedAlliance2,// slected objective alliance 
+		ObjectiveMatchNumber,
+		ObjectiveTeamNumber,
+		ScoutersNameObjective,
+		selectedAlliance2,
 	}
 
 	console.log("Subjective Data Submitted:", subjectiveData);// log the data to console for testing
