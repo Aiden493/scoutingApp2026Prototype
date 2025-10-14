@@ -39,4 +39,4 @@ In short, there are 3 different types of files within this project that relate t
 > [What is HTML?](https://www.w3schools.com/whatis/whatis_html.asp) 
 
 Project Logo:
-![Project Logo](image.png)
+![Project Logo](./Images/App_Logo.png)
