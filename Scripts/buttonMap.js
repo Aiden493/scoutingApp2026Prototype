@@ -24,6 +24,7 @@ document.getElementById('Objective').addEventListener('click', () => showScreen(
 document.getElementById('play-off').addEventListener('click', () => showScreen('play'));// shows play screen
 
 document.getElementById('continueBtn').addEventListener('click', () => showScreen('continueScreen'));// shows interactive game map screen
+document.getElementById('continueBtn').addEventListener('click', () => showScreen('continueScreen'));
 
 
 document.getElementById('robotData').addEventListener('click', () => {// robot data completion logic
@@ -35,10 +36,13 @@ document.getElementById('robotData').addEventListener('click', () => {// robot d
 });
 
 
-// Back buttons return to main
-document.querySelectorAll('.back-btn').forEach(button => {// select all back buttons
-	button.addEventListener('click', () => showScreen('main'));// on click, show main screen
+document.addEventListener("DOMContentLoaded", () => {
+	// Back buttons return to main
+	document.querySelectorAll('.back-btn, .back-btn2').forEach(button => {
+		button.addEventListener('click', () => showScreen('main'));
+	});
 });
+
 
 // Glow effect on buttons
 document.addEventListener("DOMContentLoaded", function () {// on document load
