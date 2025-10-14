@@ -2,56 +2,54 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href= "./Styles/style.css">
-		<link rel="stylesheet" href= "./Styles/style2.css">
-		<link rel = "stylesheet" href = "./Styles/stylee3.css">
-		<link rel="manifest" href="/manifest.json">
+		<meta name ="viewport" content="width=device-width, initial-scale=1.0" />
 
+		<link href = "https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
 
-		<title>FRC 2026 Scouting Prototype</title>
+		<link rel  = "stylesheet" href= "./Styles/classes.css">
+		<link rel  = "stylesheet" href= "./Styles/ids.css">
+		<link rel  = "stylesheet" href= "./Styles/style.css">
+
+		<title>[TEAM NUMBER] Scouting</title>
 	</head>
 	<body>
-		<div id="main-screen" class="SpinningBackground">
-			<h1>Scouting prototype for 2026</h1>
-			<button id="Objective" class="buttonTwo">OBJECTIVE</button>
-			<button id="Subjective" class="buttonTwo">SUBJECTIVE</button>
-			<button id="play-off" class="buttonTwo">PLAY OFF</button>
-			<button id="robotData" class="buttonTwo">ROBOT DATA</button>
+		<div id="main-screen" class="ScrollingBG">
+			<h1>[TEAM NUMBER] Scouting</h1>
+			<button id="Objective" class="MenuButton">OBJECTIVE</button>
+			<button id="Subjective" class="MenuButton">SUBJECTIVE</button>
+			<button id="play-off" class="MenuButton">PLAY OFF</button>
+			<button id="robotData" class="MenuButton">ROBOT DATA</button>
 		</div>
-
-
 		<div id="obj" class="screen">
-			<div id = "ObjectiveForm"></div>
-			<h2>Objective Scouting</h2>
-	
-			<div class="form-section">
-				<label for="ObjectiveMatchNumber">Match Number: </label>
-				<input type="number" id="ObjectiveMatchNumber" placeholder="Enter Match Number" required>
-				<br>
-				<label for="ObjectiveTeamNumber">Team Number: </label>
-				<input type="number" id="ObjectiveTeamNumber" placeholder="Enter Team Number" required> 
-			</div>
-	
-			<div class="form-section alliance-buttons">
-				<label>Alliance:</label>
-				<div class="alliance-choice">
-					<button id="ObjectiveRedAllience" class="button">Red</button>
-					<button id="ObjectiveBlueAllience" class="button">Blue</button>
+			<div class="Form" id="ObjectiveForm">
+				<h2>Objective Scouting</h2>
+		
+				<div class="form-section">
+					<label for="ObjectiveMatchNumber">Match Number: </label>
+					<input type="number" id="ObjectiveMatchNumber" placeholder="Enter Match Number" required>
+					<br>
+					<label for="ObjectiveTeamNumber">Team Number: </label>
+					<input type="number" id="ObjectiveTeamNumber" placeholder="Enter Team Number" required> 
 				</div>
+		
+				<div class="form-section alliance-buttons">
+					<label>Alliance:</label>
+					<div class="alliance-choice">
+						<button id="ObjectiveRedAllience" >Red</button>
+						<button id="ObjectiveBlueAllience" >Blue</button>
+					</div>
+				</div>
+		
+				<div class="form-section">
+					<label for="ScoutersNameObjective">Scouter's Name:</label>
+					<textarea id="ScoutersNameObjective" rows="1" placeholder="Put in your name."></textarea>
+				</div>
+		
+				<button id="submitObjective"  color="yellow">Submit</button>
+				<button id="continueBtn" color = "yellow">Continue</button>
+				<button class="back-btn" color="yellow">Back</button>
 			</div>
-	
-			<div class="form-section">
-				<label for="ScoutersNameObjective">Scouter's Name:</label>
-				<textarea id="ScoutersNameObjective" rows="1" placeholder="Put in your name."></textarea>
-			</div>
-	
-			<button id="submitObjective" class="button" color="yellow">Submit</button>
-			<button class = "button" id = "contueBtn" color = "yellow">Continue</button>
-			<button class="back-btn button" color="yellow">Back</button>
 		</div>
-	
 		<div id="continueScreen" class="screen">
 			<div class="image-row">
 				<button class = "back-btn button" color = "yellow">Back</button>
@@ -59,10 +57,8 @@
 				<img src="./Images/Blue_Alliance_BG.png"> 
 			</div>
 		</div>
-
-
 		<div id="sub" class="screen">
-			<div id="subjective-form">
+			<div class="Form" id="subjective-form">
 				<h2>Subjective Scouting</h2>
 
 				<div class="form-section">
@@ -82,8 +78,8 @@
 				<div class="form-section alliance-buttons">
 					<label>Alliance:</label>
 					<div class="alliance-choice">
-						<button id="redAlliance" class="button">Red</button>
-						<button id="blueAlliance" class="button">Blue</button>
+						<button id="redAlliance" >Red</button>
+						<button id="blueAlliance" >Blue</button>
 					</div>
 				</div>
 
@@ -107,32 +103,21 @@
 					<input type="range" min="1" max="5" id="reliability">
 				</div>
 
-				<button id="submitSubjective" class="button" color = "yellow">Submit</button>
+				<button id="submitSubjective"  color = "yellow">Submit</button>
 				<button class="back-btn" color = "yellow" class = "button">Back</button>
 			</div>
 		</div>
-
-
 		<div id="play" class="screen ">
 			<button class="back-btn">Go Back</button>
-			<div class="coral-buttons">
-				<button id="algae" class="button">Algae</button>
-				<button id="l1Coral" class="button">L1 Coral</button>
-				<button id="l2Coral" class="button">L2 Coral</button>
-				<button id="l3Coral" class="button">L3 Coral</button>
-				<button id="l4Coral" class="button">L4 Coral</button>
-				<button id="NetScore" class="button">Net Score</button>
-				<button id="Proccessor" class="button">Proccessor</button>
-			</div>
-			<button id="resetCounts" class="button">Reset Counts</button>
+			<div id="score-buttons"></div> <!-- Gets filled by the scoreButton.js file -->
+			<button id="resetCounts" >Reset Counts</button>
 		</div>
-
 		<!-- Corrected and added QR code section -->
 		<div id="dataScreen" style="margin-top: 40px; padding: 10px; border: 1px solid #ccc;">
 			<h2>Generate QR Code</h2>
 			<p id="dataInput" type="text" placeholder="Enter text to encode"
 				style="display: none;" ></p>
-			<button class="back-btn2">Go Back</button>
+			<button class="back-btn">Go Back</button>
 
 			<div id="outputData" style="margin-top: 20px; background-color:black; color:white; padding: 10px; display: none;">
 				<div id="subQRCode" class="QRCode"></div>
@@ -146,7 +131,7 @@
 		</div>
 		<script src = "./Scripts/allianceButtonLogic.js"></script>
 		<script src = "./Scripts/buttonMap.js"></script>
-		<script src = "./Scripts/coralButtonsLogic.js"></script>
+		<script src = "./Scripts/scoreButton.js"></script>
 		<script src = "./Scripts/data.js"></script>
 		<script src = "./Scripts/Pwa.js"></script>
 		<script src = "./Scripts/server.js"></script>
@@ -165,7 +150,6 @@
 
 		<!--    QR Code Library by Shim Sangmin      -->
 		<!-- https://github.com/davidshimjs/qrcodejs -->
-		<script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
-		
+		<script src = "https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
 	</body>
 </html>

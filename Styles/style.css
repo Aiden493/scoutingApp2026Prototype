@@ -1,5 +1,14 @@
-html,
-body {
+p, a, div, button {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+html, body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -11,60 +20,6 @@ body {
 	line-height: 1.5;
 	min-height: 100dvh;
 	overflow: hidden;
-}
-
-#main-screen {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background-color: #1e1e1e;
-	background-image: url('../Images/Background_Wide.png');
-	background-size: cover;
-	background-position: center;
-	text-align: center;
-	padding: 40px 20px;
-	gap: 5vh;
-	position: absolute;
-	inset: 0;
-	z-index: 10;
-}
-
-
-.SpinningBackground {
-	position: fixed;
-	background: linear-gradient(135deg, #d4af37, #ffd700);
-	background-color: #d4af37;
-	background-size: 400% 400%;
-	background-attachment: fixed;
-	animation: foilFlow 10s ease-in-out infinite;
-	width: 100vw;
-	height: 100dvh;
-	margin: 0;
-	padding: 30px;
-	color: black;
-	text-align: center;
-	z-index: -1;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	will-change: background-position;
-	overflow: hidden;
-}
-
-@keyframes foilFlow {
-	0% {
-		background-position: 0% 50%;
-	}
-
-	50% {
-		background-position: 100% 50%;
-	}
-
-	100% {
-		background-position: 0% 50%;
-	}
 }
 
 h1 {
@@ -79,8 +34,7 @@ h1 {
 	box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6);
 }
 
-
-.button {
+button {
 	padding: 18px 40px;
 	font-size: 1.2rem;
 	font-weight: bold;
@@ -90,7 +44,7 @@ h1 {
 	opacity: 0.9;
 
 	background: linear-gradient(135deg, #111, #222);
-	color: #ffd700 !important;
+	color: #ffd700;
 	border: 2px solid #ffd700;
 	outline: white 5px;
 
@@ -98,37 +52,22 @@ h1 {
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.button:hover {
+button:hover {
 	transform: translateY(-4px);
 	box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
 	background: linear-gradient(135deg, #222, #333);
 }
 
-
-.button.glow {
-	animation: glow 1.5s infinite alternate ease-in-out;
+textarea {
+	resize: none;
 }
 
-
-@keyframes glow {
-	0% {
-		box-shadow: 0 0 5px rgba(253, 236, 1, 0.6);
-	}
-
-	50% {
-		box-shadow: 0 0 15px rgb(226, 223, 7);
-	}
-
-	100% {
-		box-shadow: 0 0 5px rgba(200, 221, 8, 0.6);
-	}
-}
-
-
-.buttonTwo {
-	padding: 18px 40px;
-	font-size: 1.2rem;
-	font-weight: bold;
+input[type="number"],
+textarea,
+input[type="range"],
+input[type="text"],
+select {
+	background: rgba(255, 255, 255, 0.15);
 	border: none;
 	border-radius: 14px;
 	cursor: pointer;
@@ -249,28 +188,30 @@ h1 {
 	background-position: center;
 }
 
-#play .coral-buttons {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 20px;
-	max-width: 90%;
+input[type="number"]:focus,
+textarea:focus,
+input[type="ramge"]:focus,
+input[type="text"]:focus,
+select:focus {
+	outline: 2px solid #00BFFF;
+	background: rgba(255, 255, 255, 0.25);
 }
 
-.coral-buttons button {
-	width: 200px;
-	height: 150px;
-	font-size: 1.1rem;
-	font-weight: bold;
-	color: black;
+table {
+	border-collapse: collapse;
+	width: 100%;
+	border-radius: 12px;
+	overflow: hidden;
+	border: 2px solid black;
+	background-color: white;
 }
 
-#qrscreen {
-	background-color: black;
-	width: 200px;
-	height: 200px;
+th {
+	background: #333;
+	color: #ffd700;
 }
 
-.QRCode {
-	margin-bottom: 10px;
+td {
+	background: #222;
+	color: #ddd;
 }
