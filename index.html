@@ -94,7 +94,7 @@
 
 				<div class="form-section">
 					<label for="driverSkill">Driver Skill (1-5):</label>
-					<input type="range" min="1" max="5" id="driverSkill">
+					<input type="range" min="1" max="5" id="driverSkill" >
 				</div>
 
 				<div class="form-section">
@@ -137,6 +137,11 @@
 			<div id="outputData" style="margin-top: 20px; background-color:black; color:white; padding: 10px; display: none;">
 				<div id="subQRCode" class="QRCode"></div>
 				<div id="objQRCode" class="QRCode"></div>
+				<div id="subQRCode"></div>
+				<button id="downloadSubQR">Download Subjective QR</button>
+				<div id="objQRCode"></div>
+				<button id="downloadObjQR">Download Objective QR</button>
+
 			</div>
 		</div>
 		<script src = "./Scripts/allianceButtonLogic.js"></script>
@@ -145,6 +150,7 @@
 		<script src = "./Scripts/data.js"></script>
 		<script src = "./Scripts/Pwa.js"></script>
 		<script src = "./Scripts/server.js"></script>
+		<script src = "./Scripts/saveQr.js"></script>
 
 
 		<script>

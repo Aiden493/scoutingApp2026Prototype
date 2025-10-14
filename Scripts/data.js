@@ -95,6 +95,7 @@ document.getElementById('submitSubjective').addEventListener('click', () => {
 		selectedAlliance2,// slected objective alliance 
 	}
 
+
 	console.log("Subjective Data Submitted:", subjectiveData);// log the data to console for testing
 	alert("Subjective data saved!");// alert user
 	subjectiveCompleted = true;// set subjective completed to true
@@ -138,4 +139,10 @@ document.getElementById('submitObjective').addEventListener('click', () => {// o
 	objectiveCompleted = true;// set objective completed to true
 	console.log("objective data submitted"); // log to console for testing
 });
+
+const savedQrCodes = {
+	subjectiveContainer,
+	objectiveContainer
+
+}
 
