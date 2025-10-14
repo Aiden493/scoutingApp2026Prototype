@@ -44,17 +44,7 @@
 	border-radius: 15px;
 }
 
-.form-section {
-    height: 400px;
-    padding: 20px;
-    border: 1px solid #ccc; 
-  }
-  
-  .form-section label,
-  .form-section input {
-    display: block;
-    margin-bottom: 30px;
-  }
+
 
 .back-btn {
 	align-self: flex-start;
