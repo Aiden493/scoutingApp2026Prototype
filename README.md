@@ -23,7 +23,7 @@ Things you need to do:
 1. Make an interactive map of the seasons game (Objective Screen).
 2. Improve on how you can collect data, we only gave you a simple qr code.
 3. Change the design on how you think it would look better.
-4. Finish the PWA, We gave you the code to get started.
+4. Install Node.js and run a server to make it pwa for your end.
 5. Give the website a domain. ([Github Sites](https://docs.github.com/en/pages) are free!).
 ---
 If you're new to Web development, then there are several different resources.
