@@ -131,8 +131,6 @@ document.getElementById('submitSubjective').addEventListener('click', () => {
 		colorLight: "#ffffff",
 		correctLevel: QRCode.CorrectLevel.L
 	});
-
-	document.getElementById("outputData").style.display = "block";// display the output data container
 });
 
 // Objective submit logic
@@ -142,10 +140,3 @@ document.getElementById('submitObjective').addEventListener('click', () => {// o
 	objectiveCompleted = true;// set objective completed to true
 	console.log("objective data submitted"); // log to console for testing
 });
-
-const savedQrCodes = {
-	subjectiveContainer,
-	objectiveContainer
-
-}
-
