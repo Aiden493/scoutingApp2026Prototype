@@ -39,6 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	document.querySelectorAll('.back-btn').forEach(button => {
 		button.addEventListener('click', () => showScreen('main'));
 	});
+
+	document.querySelectorAll(".back-btn2").forEach(button => {
+		button.addEventListener('click' , ()=> showScreen('main'));
+	});
 });
 
 
