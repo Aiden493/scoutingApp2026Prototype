@@ -31,7 +31,9 @@
 	border-radius: 15px;
 }
 
-
+.scoreButton {
+	margin: 5px;
+}
 
 .back-btn {
 	align-self: flex-start;

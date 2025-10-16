@@ -9,6 +9,7 @@ function makeButton(name)// function that makes a button with the naame passed i
 	console.log("Making button " + name);// logs to console the name of the button being made
 
 	var btn = document.createElement("button");// creates a button element
+	btn.className = "scoreButton";
 	btn.innerText = name;// sets the text of the button to the name passed in 
 	buttonContainer.append(btn);// appends the button to the button container
 }
