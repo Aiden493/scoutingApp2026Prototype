@@ -24,8 +24,6 @@ document.getElementById('Objective').addEventListener('click', () => showScreen(
 document.getElementById('play-off').addEventListener('click', () => showScreen('play'));// shows play screen
 
 document.getElementById('continueBtn').addEventListener('click', () => showScreen('continueScreen'));// shows interactive game map screen
-document.getElementById('continueBtn').addEventListener('click', () => showScreen('continueScreen'));
-
 
 document.getElementById('robotData').addEventListener('click', () => {// robot data completion logic
 	if (subjectiveCompleted && objectiveCompleted) {// check if both subjective and objective are completed
@@ -38,7 +36,7 @@ document.getElementById('robotData').addEventListener('click', () => {// robot d
 
 document.addEventListener("DOMContentLoaded", () => {
 	// Back buttons return to main
-	document.querySelectorAll('.back-btn, .back-btn2').forEach(button => {
+	document.querySelectorAll('.back-btn').forEach(button => {
 		button.addEventListener('click', () => showScreen('main'));
 	});
 });
