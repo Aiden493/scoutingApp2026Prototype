@@ -67,6 +67,7 @@ textarea,
 input[type="range"],
 input[type="text"],
 select {
+	padding: 5px;
 	background: rgba(255, 255, 255, 0.15);
 	border: none;
 	border-radius: 14px;
