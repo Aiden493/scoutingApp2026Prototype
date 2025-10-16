@@ -53,6 +53,14 @@
 	text-align: center;
 }
 
+#outputData {
+	margin-top: 20px;
+	background-color: black;
+	padding: 10px;
+	display: grid;
+	justify-items: center;
+	border-radius: 16px;
+}
 
 #redAlliance, #blueAlliance {
 	display: inline-block;
