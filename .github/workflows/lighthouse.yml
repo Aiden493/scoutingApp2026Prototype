@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '16'
@@ -22,4 +22,7 @@ jobs:
         run: npm install -g @lhci/cli@0.7.x
 
       - name: Run Lighthouse CI
-        run: lhci autorun --upload.target=temporary-public-storage
+        run: |
+          lhci collect --url=https://YOUR_DEPLOYED_SITE_URL_HERE
+          lhci assert --assertions.mobile-friendly=error
+          lhci upload --target=temporary-public-storage
