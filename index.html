@@ -11,6 +11,8 @@
 		<link rel  = "stylesheet" href= "./Styles/classes.css">
 		<link rel  = "stylesheet" href= "./Styles/ids.css">
 		<link rel  = "stylesheet" href= "./Styles/style.css">
+		<link rel = "stylesheet" href = ".styles/colors.css">
+		<link rel = "stylesheet" href = ".styles/mobileFriendly.css">
 
 		<title>[TEAM NUMBER] Scouting</title>
 	</head>
@@ -120,9 +122,10 @@
 		</div>
 		<!-- Corrected and added QR code section -->
 		<div id="dataScreen" style="margin-top: 40px; padding: 10px; border: 1px solid #ccc;">
-			<h2>Generate QR Code</h2>
-			<p id="dataInput" type="text" placeholder="Enter text to encode"
-				style="display: none;" ></p>
+			<div class="robot-data-wrapper">
+				<canvas id="subjectiveQR"></canvas>
+				<canvas id="objectiveQR"></canvas>
+			  </div>
 			<button class="back-btn2">Go Back</button>
 
 			<div id="outputData">
