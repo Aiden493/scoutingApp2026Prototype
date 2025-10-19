@@ -1,218 +1,289 @@
 p, a, div, button {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-}
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+		 -moz-user-select: none; /* Old versions of Firefox */
+		  -ms-user-select: none; /* Internet Explorer/Edge */
+			  user-select: none; /* Non-prefixed version, currently
+									supported by Chrome, Edge, Opera and Firefox */
+  }
+  
+  html, body {
+	 
+	  margin: 0;
+	  padding: 0;
+	  overflow-x: hidden;
+	  height: 100%;
+	  width: 100%;
+	  font-family: 'Poppins', sans-serif;
+	  background-color: #111;
+	  color: #fff;
+	  letter-spacing: 0.5px;
+	  line-height: 1.5;
+	  min-height: 100dvh;
+	  overflow: hidden;	
+	  background-size: cover;
+	  background-repeat: no-repeat;
+	  background-position: top center;
+	  background-attachment: fixed;
+	  min-height: 100vh;
+	  
+	  
+  }
+  
+  h1 {
+	  font-size: 2.5rem;
+	  font-weight: 600;
+	  margin: 0;
+	  color: black;
+	  background-color: rgba(255, 255, 255, 0.85);
+	  padding: 15px 25px;
+	  border-radius: 20px;
+	  border: 4px solid black;
+	  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6);
+  }
+  
+  button {
+	  font-weight: bold;
+	  border: none;
+	  cursor: pointer;
+	  opacity: 0.9;
+	  background: linear-gradient(135deg, #111, #222);
+	  color: #ffd700;
+	  border: 2px solid #ffd700;
+	  outline: white 5px;
+	  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6);
+	  transition: transform 0.2s ease, box-shadow 0.2s ease;
+	  padding: 14px 20px;
+	  font-size: 1.1rem;
+	  border-radius: 8px;
+      min-width: 44px;
+	  min-height: 44px;
+	  
+	  
+  }
+  
+  button:hover {
+	  transform: translateY(-4px);
+	  box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
+	  background: linear-gradient(135deg, #222, #333);
+  }
+  
+  textarea {
+	  resize: none;
+  }
+  
+  input[type="number"],
+  textarea,
+  input[type="range"],
+  input[type="text"],
+  select {
+	  padding: 5px;
+	  background: rgba(255, 255, 255, 0.15);
+	  border: none;
+	  border-radius: 14px;
+	  cursor: pointer;
+	  opacity: 0.9;
+	  color: yellow;
+  
+	  background: linear-gradient(135deg, #111, #222);
+  
+	  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6);
+	  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  
+  .buttonTwo:hover {
+	  transform: translateY(-4px);
+	  background: linear-gradient(135deg, #222, #333);
+  }
+  
+  .buttonTwo:hover {
+	  transform: translateY(-4px);
+	  box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
+	  background: linear-gradient(135deg, #222, #333);
+  }
+  
+  
+  .buttonTwo.glow2 {
+	  animation: glow 1.5s infinite alternate ease-in-out;
+  }
+  
+  
+  
+  .screen {
+	  display: none;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+	  position: absolute;
+	  inset: 0;
+	  min-height: 100dvh;
+	  padding: 30px 20px;
+	  background-color: #1a1a1a;
+	  color: white;
+	  z-index: 9;
+	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .back-btn {
+	  align-self: flex-start;
+	  margin-bottom: 20px;
+	  padding: 18px 40px;
+	  font-size: 1.2rem;
+	  font-weight: bold;
+	  border: none;
+	  border-radius: 14px;
+	  cursor: pointer;
+	  opacity: 0.9;
+  
+	  background: linear-gradient(135deg, #111, #222);
+	  color: #ffd700 !important;
+	  border: 2px solid #ffd700;
+  
+	  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6);
+	  transition: transform 0.2s ease, box-shadow 0.2s ease;
+	  background-color: crimson;
+  }
+  
+  
+  .back-btn:hover {
+	  transform: translateY(-4px);
+	  box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
+	  background: linear-gradient(135deg, #222, #333);
+  }
+  
+  
+  
+  
+  .back-btn2 {
+	  align-self: flex-start;
+	  margin-bottom: 20px;
+	  padding: 18px 40px;
+	  font-size: 1.2rem;
+	  font-weight: bold;
+	  border: none;
+	  border-radius: 14px;
+	  cursor: pointer;
+	  opacity: 0.9;
+  
+	  background: linear-gradient(135deg, #111, #222);
+	  color: #ffd700 !important;
+	  border: 2px solid #ffd700;
+  
+	  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6);
+	  transition: transform 0.2s ease, box-shadow 0.2s ease;
+	  background-color: crimson;
+  
+	  position: relative;
+	  top: 600px;
+	  right: 220px;
+  }
+  
+  .back-btn2:hover {
+	  transform: translateY(-4px);
+	  background: linear-gradient(135deg, #222, #333);
+  }
+  
+  
+  
+  #play {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: flex-start;
+	  align-items: center;
+	  padding: 60px 20px;
+	  gap: 40px;
+	  background-image: url('../Images/Playoffs_BG.png');
+	  height: 50%;
+	  background-size: cover;
+	  background-position: center;
+  }
+  
+  input[type="number"]:focus,
+  textarea:focus,
+  input[type="ramge"]:focus,
+  input[type="text"]:focus,
+  select:focus {
+	  outline: 2px solid #00BFFF;
+	  background: rgba(255, 255, 255, 0.25);
+  }
+  
+  table {
+	  border-collapse: collapse;
+	  width: 100%;
+	  border-radius: 12px;
+	  overflow: hidden;
+	  border: 2px solid black;
+	  background-color: white;
+  }
+  
+  th {
+	  background: #333;
+	  color: #ffd700;
+  }
+  
+  td {
+	  background: #222;
+	  color: #ddd;
+  }
 
-html, body {
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: 100%;
-	font-family: 'Poppins', sans-serif;
-	background-color: #111;
-	color: #fff;
-	letter-spacing: 0.5px;
-	line-height: 1.5;
-	min-height: 100dvh;
-	overflow: hidden;
-}
+  @media (max-width: 600px) {
+	.some‑container { padding: 10px; }
+	.button { font-size: 1.2rem; height: 48px; width: 100%; }
+  }
+  
+@media (max-width: 768px) {
+	body {
+	  padding: 10px;
+	  font-size: 16px;
+	}
+  
+	button, input {
+	  width: 100%;
+	  font-size: 1.1rem;
+	  padding: 12px;
+	  margin: 10px 0;
+	}
+  
+	.container {
+	  display: block;
+	  width: 100%;
+	}
+  
+	.nav, .sidebar {
+	  display: none; 
+	}
+  }
+  
+  @media (max-width: 600px) {
+	.form-row {
+	  flex-direction: column;
+	  align-items: stretch;
+	}
+  
+	label, input {
+	  width: 100%;
+	}
+  }
 
-h1 {
-	font-size: 2.5rem;
-	font-weight: 600;
-	margin: 0;
-	color: black;
-	background-color: rgba(255, 255, 255, 0.85);
-	padding: 15px 25px;
-	border-radius: 20px;
-	border: 4px solid black;
-	box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6);
-}
-
-button {
-	padding: 18px 40px;
-	font-size: 1.2rem;
-	font-weight: bold;
-	border: none;
-	border-radius: 14px;
-	cursor: pointer;
-	opacity: 0.9;
-
-	background: linear-gradient(135deg, #111, #222);
-	color: #ffd700;
-	border: 2px solid #ffd700;
-	outline: white 5px;
-
-	box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6);
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-button:hover {
-	transform: translateY(-4px);
-	box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
-	background: linear-gradient(135deg, #222, #333);
-}
-
-textarea {
-	resize: none;
-}
-
-input[type="number"],
-textarea,
-input[type="range"],
-input[type="text"],
-select {
-	padding: 5px;
-	background: rgba(255, 255, 255, 0.15);
-	border: none;
-	border-radius: 14px;
-	cursor: pointer;
-	opacity: 0.9;
-	color: yellow;
-
-	background: linear-gradient(135deg, #111, #222);
-
-	box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6);
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+  
+  canvas {
+	max-width: 100%;
+	height: auto;
+  }
+  
+  @media (max-width: 768px) {
+	#playoff-image {
+	  display: none;
+	}
+  }
+  
+  @keyframes glow{
+	from {
+		box-shadow: 0 0 10px rgba(225 , 215 , 0 , 0.5);
+	}
+  }
 
 
-.buttonTwo:hover {
-	transform: translateY(-4px);
-	background: linear-gradient(135deg, #222, #333);
-}
-
-.buttonTwo:hover {
-	transform: translateY(-4px);
-	box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
-	background: linear-gradient(135deg, #222, #333);
-}
-
-
-.buttonTwo.glow2 {
-	animation: glow 1.5s infinite alternate ease-in-out;
-}
-
-
-
-.screen {
-	display: none;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	inset: 0;
-	min-height: 100dvh;
-	padding: 30px 20px;
-	background-color: #1a1a1a;
-	color: white;
-	z-index: 9;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-.back-btn {
-	align-self: flex-start;
-	margin-bottom: 20px;
-	padding: 18px 40px;
-	font-size: 1.2rem;
-	font-weight: bold;
-	border: none;
-	border-radius: 14px;
-	cursor: pointer;
-	opacity: 0.9;
-
-	background: linear-gradient(135deg, #111, #222);
-	color: #ffd700 !important;
-	border: 2px solid #ffd700;
-
-	box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6);
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
-	background-color: crimson;
-}
-
-
-.back-btn:hover {
-	transform: translateY(-4px);
-	box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
-	background: linear-gradient(135deg, #222, #333);
-}
-
-
-
-
-.back-btn2 {
-	align-self: flex-start;
-	margin-bottom: 20px;
-	padding: 18px 40px;
-	font-size: 1.2rem;
-	font-weight: bold;
-	border: none;
-	border-radius: 14px;
-	cursor: pointer;
-	opacity: 0.9;
-
-	background: linear-gradient(135deg, #111, #222);
-	color: #ffd700 !important;
-	border: 2px solid #ffd700;
-
-	box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6);
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
-	background-color: crimson;
-
-	position: relative;
-	top: 610px;
-	right: 200px;
-}
-
-.back-btn2:hover {
-	transform: translateY(-4px);
-	background: linear-gradient(135deg, #222, #333);
-}
-
-
-
-#play {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-	padding: 60px 20px;
-	gap: 40px;
-	background-image: url('../Images/Playoffs_BG.png');
-	height: 50%;
-	background-size: cover;
-	background-position: center;
-}
-
-input[type="number"]:focus,
-textarea:focus,
-input[type="ramge"]:focus,
-input[type="text"]:focus,
-select:focus {
-	outline: 2px solid #00BFFF;
-	background: rgba(255, 255, 255, 0.25);
-}
-
-table {
-	border-collapse: collapse;
-	width: 100%;
-	border-radius: 12px;
-	overflow: hidden;
-	border: 2px solid black;
-	background-color: white;
-}
-
-th {
-	background: #333;
-	color: #ffd700;
-}
-
-td {
-	background: #222;
-	color: #ddd;
-}
+  
