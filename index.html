@@ -121,21 +121,16 @@
 			<button id="resetCounts" >Reset Counts</button>
 		</div>
 		<!-- Corrected and added QR code section -->
-		<div id="dataScreen" style="margin-top: 40px; padding: 10px; border: 1px solid #ccc;">
-			<div class="robot-data-wrapper">
-				<canvas id="subjectiveQR"></canvas>
-				<canvas id="objectiveQR"></canvas>
-			  </div>
-			<button class="back-btn2">Go Back</button>
-
-			<div id="outputData">
-				<div id="subQRCode" class="QRCode"></div>
-				<div id="objQRCode" class="QRCode"></div>
-				<div id="subQRCode"></div>
-				<button id="downloadSubQR">Download Subjective QR</button>
-				<div id="objQRCode"></div>
-				<button id="downloadObjQR">Download Objective QR</button>
-
+		<div id="dataScreen" class="screen">
+			<div class="Form">
+				<button class="back-btn">Go Back</button>
+	
+				<div id="outputData">
+					<div id="subQRCode" class="QRCode"></div>
+					<div id="objQRCode" class="QRCode"></div>
+					<button id="downloadSubQR">Download Subjective QR</button>
+					<button id="downloadObjQR">Download Objective QR</button>
+				</div>
 			</div>
 		</div>
 		<script src = "./Scripts/allianceButtonLogic.js"></script>

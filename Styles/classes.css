@@ -6,44 +6,43 @@
 	border: 0;
 }
 
-html, body {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-  }
-  
-  .Form {
+.Form {
 	padding: 2vh 5vh 2vh 2vh;
 	margin: 0;
 	height: 100vh;
 	width: 100%;
+
+	max-width: 30vw;
+	max-height: 90vh;
+
 	gap: 20px;
-  
+
 	text-align: center;
 	display: flex;
 	flex-direction: column;
-  
+
 	overflow-x: hidden;
 	overflow-y: auto;
-  
+
 	color: var(--text-light);
 	background-color: var(--bg-form);
-  
+
 	border-radius: 15px;
-  }
-  
-  @media (min-width: 768px) {
+}
+
+@media (min-width: 768px) {
 	.Form {
-	  margin-top: -5vh;
+		margin-top: -5vh;
 	}
-  }
-  
-  @media (max-width: 767px) {
+}
+
+@media (max-width: 767px) {
 	.Form {
-	  margin-top: 0;
+		margin-top: 0;
+		max-width: 60vw;
 	}
-  }
-  
+}
+
 
 .scoreButton {
 	margin: 5px;
@@ -74,11 +73,6 @@ html, body {
 	background: linear-gradient(135deg, var(--button-gradient-hover-start), var(--button-gradient-hover-end));
 }
 
-.back-btn:focus {
-	outline: 2px solid var(--accent-gold);
-	outline-offset: 4px;
-}
-
 .screen {
 	display: none;
 	flex-direction: column;
@@ -105,6 +99,7 @@ html, body {
 	from {
 		background-position: 0 0;
 	}
+
 	to {
 		background-position: 100vw 0;
 	}
@@ -135,57 +130,57 @@ html, body {
 
 .background {
 	position: fixed;
-	top: 0; left: 0;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
 	z-index: -1;
-  }
+}
 
-  .main-content {
+.main-content {
 	position: relative;
 	z-index: 1;
-  }
-  
+}
 
-  @media (max-width: 768px) {
+
+@media (max-width: 768px) {
 	.subjective-container {
-	  display: block;
-	  width: 100%;
-	  padding: 16px;
+		display: block;
+		width: 100%;
+		padding: 16px;
 	}
-  
+
 	.subjective-container input,
 	.subjective-container textarea,
 	.subjective-container button {
-	  width: 100%;
-	  font-size: 1rem;
-	  margin: 8px 0;
+		width: 100%;
+		font-size: 1rem;
+		margin: 8px 0;
 	}
-  }
+}
 
-  .subjective-container {
+.subjective-container {
 	max-height: 100vh;
 	overflow-y: auto;
-	padding-bottom: 100px; 
-  }
-  
+	padding-bottom: 100px;
+}
 
-  .robot-data-wrapper {
+
+.robot-data-wrapper {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;   
+	justify-content: center;
 	gap: 20px;
 	padding: 20px;
-	min-height: 100vh;           
+	min-height: 100vh;
 	max-width: 100%;
 	overflow-x: auto;
-	
-  }
-  
-  .robot-data-wrapper canvas {
+
+}
+
+.robot-data-wrapper canvas {
 	width: 100%;
-	max-width: 300px; 
+	max-width: 300px;
 	height: auto;
-  }
-  
+}
